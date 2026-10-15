@@ -3,3 +3,23 @@
 /* --------------------------------------
   title
 -------------------------------------- */
+
+.c-title__en {
+  font-family: g.$font-family-en;
+  font-weight: g.$font-weight-semibold;
+  text-transform: uppercase;
+  line-height: 1.43;
+  font-size: 56rem;
+
+  @include g.media() {
+    font-size: 64rem;
+  }
+}
+
+.c-title__ja {
+  font-family: g.$font-family-jp;
+  font-weight: g.$font-weight-bold;
+  color: g.$color-accent;
+  line-height: 1.1875;
+  font-size: 16rem;
+}
