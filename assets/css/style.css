@@ -226,6 +226,41 @@ body {
 }
 
 /* --------------------------------------
+  btn
+-------------------------------------- */
+.c-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.c-btn {
+  border: 1px solid #4a90e2;
+  background: #4a90e2;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  width: 240px;
+  height: 56px;
+  font-size: 18px;
+  transition: background 0.3s, color 0.3s;
+}
+.c-btn--back {
+  border: 1px solid #333;
+  background: transparent;
+  color: #333;
+}
+@media (width >= 900px) {
+  .c-btn:hover, .c-btn--back:hover {
+    border: 1px solid #4a90e2;
+    background: transparent;
+    color: #4a90e2;
+  }
+}
+
+/* --------------------------------------
   header
 -------------------------------------- */
 /* --------------------------------------

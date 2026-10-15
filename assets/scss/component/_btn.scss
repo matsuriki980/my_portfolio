@@ -1,0 +1,45 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  btn
+-------------------------------------- */
+
+// 複数の場合、ボタンを縦に並べ10pxの間隔を空ける
+.c-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.c-btn {
+  border: 1px solid g.$color-accent;
+  background: g.$color-accent;
+  color: g.$color-bg;
+  display: grid;
+  place-items: center;
+  width: 240px;
+  height: 56px;
+  font-size: 18px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+
+  // ボタンの種類がbackの場合、背景を透明にする
+  &--back {
+    border: 1px solid g.$color-text;
+    background: transparent;
+    color: g.$color-text;
+  }
+
+  @include g.media() {
+    // ボタンをホバーした時のスタイル
+    &:hover,
+    &--back:hover {
+      border: 1px solid g.$color-accent;
+      background: transparent;
+      color: g.$color-accent;
+    }
+  }
+}
