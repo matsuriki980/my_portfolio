@@ -263,6 +263,113 @@ body {
 /* --------------------------------------
   header
 -------------------------------------- */
+.l-header {
+  height: 90px;
+}
+
+.l-header__inner {
+  height: 100%;
+  padding-inline: 24rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (width >= 900px) {
+  .l-header__inner {
+    padding-inline: 80rem;
+  }
+}
+
+.l-header__logo a {
+  font-size: 22rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+@media (width >= 900px) {
+  .l-header__logo a {
+    font-size: 24px;
+  }
+}
+
+.l-header__nav {
+  display: none;
+}
+@media (width >= 900px) {
+  .l-header__nav {
+    display: block;
+  }
+}
+
+@media (width >= 900px) {
+  .l-header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+  }
+}
+
+@media (width >= 900px) {
+  .l-header__nav-item a {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .l-header__nav-item a:hover {
+    color: #4a90e2;
+  }
+  .l-header__nav-item--contact a {
+    font-size: 18px;
+    border: 1px solid #4a90e2;
+    border-radius: 4rem;
+    background: #4a90e2;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    width: 170px;
+    height: 56px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .l-header__nav-item--contact a:hover {
+    border: 1px solid #4a90e2;
+    background: transparent;
+    color: #4a90e2;
+  }
+}
+
+.l-header__hamburger {
+  width: 56rem;
+  aspect-ratio: 1/1;
+  background: #4a90e2;
+  position: relative;
+  border-radius: 4rem;
+}
+.l-header__hamburger span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32rem;
+  height: 1rem;
+  background: #fff;
+}
+.l-header__hamburger span:nth-of-type(1) {
+  top: 20rem;
+}
+.l-header__hamburger span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.l-header__hamburger span:nth-of-type(3) {
+  bottom: 20rem;
+}
+@media (width >= 900px) {
+  .l-header__hamburger {
+    display: none;
+  }
+}
+
 /* --------------------------------------
   footer
 -------------------------------------- */
