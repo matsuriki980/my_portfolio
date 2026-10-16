@@ -1,0 +1,31 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  hamburger-menu
+-------------------------------------- */
+.l-hamburger-menu {
+    background-color: g.$color-accent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.l-hamburger-menu__list {
+    padding-top: 100rem;
+}
+
+.l-hamburger-menu__item {
+
+    a {
+        display: block;
+        font-size: 20rem;
+        font-weight: g.$font-weight-semibold;
+        font-family: g.$font-family-en;
+        text-transform: uppercase;
+        color: g.$color-bg;
+        padding: 24rem 0;
+        border-bottom: 1px solid g.$color-bg;
+    }
+}
