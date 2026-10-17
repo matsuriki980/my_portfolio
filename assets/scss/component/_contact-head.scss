@@ -1,0 +1,34 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  contact-head
+-------------------------------------- */
+.c-contact-head {
+  margin-bottom: 40rem;
+  text-align: center;
+}
+
+.c-contact-head__title {
+  font-weight: g.$font-weight-medium;
+  line-height: 1.5;
+  font-size: 24rem;
+  margin-bottom: 16rem;
+
+  @include g.media() {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.c-contact-head__lead {
+  line-height: 2;
+  font-size: 16rem;
+
+  span {
+    display: block;
+  }
+
+  @include g.media() {
+    font-size: 18px;
+  }
+}

@@ -261,6 +261,40 @@ body {
 }
 
 /* --------------------------------------
+  contact-head
+-------------------------------------- */
+.c-contact-head {
+  margin-bottom: 40rem;
+  text-align: center;
+}
+
+.c-contact-head__title {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 24rem;
+  margin-bottom: 16rem;
+}
+@media (width >= 900px) {
+  .c-contact-head__title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.c-contact-head__lead {
+  line-height: 2;
+  font-size: 16rem;
+}
+.c-contact-head__lead span {
+  display: block;
+}
+@media (width >= 900px) {
+  .c-contact-head__lead {
+    font-size: 18px;
+  }
+}
+
+/* --------------------------------------
   header
 -------------------------------------- */
 .l-header {
