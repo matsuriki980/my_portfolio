@@ -1253,5 +1253,70 @@ body {
   top: -5rem;
   left: -4rem;
 }
+/* --------------------------------------
+  about-like
+-------------------------------------- */
+.p-about-like__inner {
+  padding-block: 80rem;
+}
+@media (width >= 900px) {
+  .p-about-like__inner {
+    padding-block: 120px;
+  }
+}
+
+.p-about-like__title-wrapper {
+  margin-bottom: 40rem;
+  text-align: center;
+}
+@media (width >= 900px) {
+  .p-about-like__title-wrapper {
+    margin-bottom: 80px;
+  }
+}
+
+.p-about-like__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 72rem;
+}
+@media (width >= 900px) {
+  .p-about-like__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64rem;
+  }
+}
+
+.p-about-like__img {
+  margin-bottom: 12rem;
+}
+@media (width >= 900px) {
+  .p-about-like__img {
+    margin-bottom: 16px;
+  }
+}
+
+.p-about-like__item-title {
+  font-size: 20rem;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+}
+@media (width >= 900px) {
+  .p-about-like__item-title {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+}
+
+.p-about-like__text {
+  font-size: 14rem;
+  line-height: 2;
+}
+@media (width >= 900px) {
+  .p-about-like__text {
+    font-size: 16px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
