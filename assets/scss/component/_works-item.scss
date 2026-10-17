@@ -17,7 +17,7 @@
 
   @include g.media() {
     margin-bottom: 14px;
-  
+
     img {
       transition: transform 0.3s;
     }
@@ -38,10 +38,10 @@
 .c-works-item__title {
   font-size: 20rem;
   line-height: 1.6;
-  margin-top: 11rem;
+  margin-bottom: 8rem;
 
   @include g.media() {
-    font-size: 20px;
+    font-size: clamp(17px, 20rem, 20px);
     margin-bottom: 7px;
   }
 }
@@ -64,7 +64,7 @@
   color: g.$color-bg;
 
   @include g.media() {
-    font-size: 14px;
+    font-size: clamp(10px, 14rem, 14px);
   }
 }
 
@@ -72,8 +72,9 @@
   font-size: 14rem;
   font-family: g.$font-family-en;
   font-weight: g.$font-weight-regular;
+  text-transform: capitalize;
 
   @include g.media() {
-    font-size: 14px;
+    font-size: clamp(10px, 14rem, 14px);
   }
 }
