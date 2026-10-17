@@ -362,16 +362,6 @@ body {
 /* --------------------------------------
   works-item
 -------------------------------------- */
-.wrapper {
-  padding-inline: 24rem;
-}
-@media (width >= 900px) {
-  .wrapper {
-    padding-inline: 0;
-    width: 362px;
-  }
-}
-
 .c-works-item {
   width: 100%;
 }

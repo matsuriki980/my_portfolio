@@ -4,15 +4,6 @@
   works-item
 -------------------------------------- */
 
-.wrapper {
-  padding-inline: 24rem;
-
-  @include g.media() {
-    padding-inline: 0;
-    width: 362px;
-  }
-}
-
 .c-works-item {
   width: 100%;
 }
