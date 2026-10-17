@@ -1,0 +1,71 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  top-about
+-------------------------------------- */
+.p-top-about {
+  background: g.$color-bg-light;
+}
+
+.p-top-about__inner {
+  padding-block: 80rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.media() {
+    padding-block: 80px;
+    grid-template-columns: 1fr 480rem;
+    gap: 80rem;
+    align-items: center;
+  }
+}
+
+.p-top-about__content {
+  order: 2;
+
+  @include g.media() {
+    order: 1;
+    width: 100%;
+  }
+}
+
+.p-top-about__title-wrapper {
+  margin-bottom: 40rem;
+
+  @include g.media() {
+    margin-bottom: 40px;
+  }
+}
+.p-top-about__text {
+  font-size: 14rem;
+  font-weight: g.$font-weight-regular;
+  line-height: 2;
+  margin-bottom: 40rem;
+
+  span {
+    display: block;
+  }
+
+  @include g.media() {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+.p-top-about__btn {
+}
+
+.p-top-about__img {
+  margin-bottom: 48rem;
+
+  @include g.media() {
+    order: 2;
+    margin-bottom: 0;
+    height: 100%;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
