@@ -1,0 +1,88 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  works-item
+-------------------------------------- */
+
+.wrapper {
+  padding-inline: 24rem;
+
+  @include g.media() {
+    padding-inline: 0;
+    width: 362px;
+  }
+}
+
+.c-works-item {
+  width: 100%;
+}
+
+.c-works-item__img {
+  width: 100%;
+  aspect-ratio: 362/232;
+  background: g.$color-bg-light;
+  margin-bottom: 14rem;
+  overflow: hidden;
+
+  @include g.media() {
+    margin-bottom: 14px;
+  
+    img {
+      transition: transform 0.3s;
+    }
+  }
+}
+
+// リンクをhoverした時、画像を拡大する
+.c-works-item {
+  @include g.media() {
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.c-works-item__title {
+  font-size: 20rem;
+  line-height: 1.6;
+  margin-top: 11rem;
+
+  @include g.media() {
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+}
+
+.c-works-item__info {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+
+  @include g.media() {
+    gap: 10px;
+  }
+}
+
+.c-works-item__category {
+  background: g.$color-accent;
+  font-size: 14rem;
+  font-weight: g.$font-weight-medium;
+  padding: 4rem 12rem;
+  color: g.$color-bg;
+
+  @include g.media() {
+    font-size: 14px;
+  }
+}
+
+.c-works-item__responsibility {
+  font-size: 14rem;
+  font-family: g.$font-family-en;
+  font-weight: g.$font-weight-regular;
+
+  @include g.media() {
+    font-size: 14px;
+  }
+}
