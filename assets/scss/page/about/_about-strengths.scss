@@ -1,0 +1,88 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  about-strengths
+-------------------------------------- */
+
+.p-about-strengths {
+}
+
+.p-about-strengths__inner {
+  padding-block: 80rem;
+
+  @include g.media() {
+    padding-block: 120px;
+    display: grid;
+    grid-template-columns: 480rem 1fr;
+    gap: 80rem;
+    align-items: flex-start;
+  }
+}
+
+.p-about-strengths__title-wrapper {
+  margin-bottom: 80rem;
+
+  @include g.media() {
+    margin-bottom: 40px;
+  }
+}
+
+.p-about-strengths__title-en {
+  letter-spacing: -0.05em;
+  line-height: 1;
+
+  @include g.media() {
+    margin-bottom: 4px;
+  }
+}
+
+.p-about-strengths__list {
+  display: flex;
+  flex-direction: column;
+  gap: 80rem;
+
+  @include g.media() {
+    gap: 80px;
+  }
+}
+
+.p-about-strengths__item {
+  position: relative;
+}
+
+.p-about-strengths__title {
+  font-size: 24rem;
+  font-weight: g.$font-weight-bold;
+  line-height: 1.2;
+  margin-bottom: 12rem;
+
+  @include g.media() {
+    font-size: clamp(24px, 24rem, 36px);
+    margin-bottom: 12px;
+  }
+}
+
+.p-about-strengths__text {
+  font-size: 14rem;
+  font-weight: g.$font-weight-regular;
+  line-height: 2;
+
+  @include g.media() {
+    font-size: clamp(14px, 16rem, 18px);
+  }
+}
+
+.p-about-strengths__number {
+  font-family: g.$font-family-en;
+  font-weight: g.$font-weight-bold;
+  font-size: 96rem;
+  color: g.$color-accent;
+  position: absolute;
+  opacity: 0.15;
+  line-height: 0.33;
+  top: -5rem;
+  left: -4rem;
+
+  @include g.media() {
+  }
+}
