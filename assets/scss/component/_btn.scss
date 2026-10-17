@@ -43,3 +43,115 @@
     }
   }
 }
+
+// 下線タイプのボタン
+.c-btn-underline {
+  font-size: 20rem;
+  font-weight: g.$font-weight-bold;
+  font-family: g.$font-family-en;
+  text-transform: uppercase;
+  color: g.$color-text;
+  padding-bottom: 12rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 24rem;
+  position: relative;
+  transition: color 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1rem;
+    transition: transform 0.3s;
+  }
+
+  // 下線
+  &::before {
+    width: 100%;
+    background: g.$color-text;
+    left: 0;
+  }
+
+  // hover時の下線
+  &::after {
+    width: 0;
+    right: 0;
+    background: g.$color-accent;
+    transition: width 0.3s;
+  }
+
+  // 矢印
+  &__arrow {
+    position: relative;
+    display: inline-block;
+    width: 8.2rem;
+    height: 12.5rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1rem);
+      right: 0;
+      width: 10rem;
+      height: 2rem;
+      border-radius: 9999px;
+      background: g.$color-text;
+      transform-origin: calc(100% - 1rem) 50%;
+      transition: background 0.3s;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include g.media() {
+    font-size: 20px;
+    padding-bottom: 12px;
+    gap: 24px;
+
+    &::before,
+    &::after {
+      height: 2px;
+    }
+
+    // 矢印
+    &__arrow {
+      width: 8.2px;
+      height: 12.5px;
+
+      &::before,
+      &::after {
+        top: calc(50% - 1px);
+        width: 10px;
+        height: 2px;
+        transform-origin: calc(100% - 1px) 50%;
+      }
+    }
+
+    // ボタンをホバーした時のスタイル
+    &:hover {
+      color: g.$color-accent;
+
+      &::after {
+        width: 100%;
+        left: 0;
+      }
+
+      // 矢印
+      .c-btn-underline__arrow {
+        &::before,
+        &::after {
+          background: g.$color-accent;
+        }
+      }
+    }
+  }
+}
