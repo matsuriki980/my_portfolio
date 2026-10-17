@@ -25,6 +25,100 @@
 </head>
 
 <body>
+    <!-- header -->
+    <header class="l-header">
+        <div class="l-header__inner">
+            <div class="l-header__logo">
+                <a href="index.html" class="u-link">matsuyama rikiya</a>
+            </div>
+
+            <nav class="l-header__nav">
+                <ul class="l-header__nav-list">
+                    <li class="l-header__nav-item"><a href="index.html">top</a></li>
+                    <li class="l-header__nav-item"><a href="works.html">works</a></li>
+                    <li class="l-header__nav-item"><a href="about.html">about</a></li>
+                    <li class="l-header__nav-item l-header__nav-item--contact"><a href="contact/">contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="l-header__hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- hamburger-menu -->
+    <nav class="l-hamburger-menu u-pc-hidden u-pi" aria-label="ハンバーガーメニュー">
+        <ul class="l-hamburger-menu__list">
+            <li class="l-hamburger-menu__item"><a href="index.html">top</a></li>
+            <li class="l-hamburger-menu__item"><a href="works.html">works</a></li>
+            <li class="l-hamburger-menu__item"><a href="about.html">about</a></li>
+            <li class="l-hamburger-menu__item"><a href="contact/">contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- fv -->
+    <section class="fv-sub-page">
+        <div class="fv-sub-page__inner">
+            <div class="fv-sub-page__title-wrapper">
+                <p class="fv-sub-page__title-en">about</p>
+                <h1 class="fv-sub-page__title-ja">私について</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- profile -->
+    <section class="p-about-profile">
+        <div class="p-about-profile__inner u-wrapper">
+
+            <!-- content -->
+            <div class="p-about-profile__content">
+                <div class="c-title__wrapper p-about-profile__title-wrapper">
+                    <p class="c-title__en">profile</p>
+                    <h2 class="c-title__ja">プロフィール</h2>
+                </div>
+
+                <div class="p-about-profile__name-wrapper">
+                   <p class="p-about-profile__name-ja">松山 里貴弥</p>
+                   <span class="p-about-profile__name-en">matsuyama rikiya</span>
+                </div>
+
+                <p class="p-about-profile__text">
+                    <span>高校卒業後約7年間、製造業と建設業に従事。</span>
+                    <span>将来を考えたことをきっかけに、Web制作に興味を持ち、2023年9月にデジタルハリウッドに入学。</span>
+                    <span>学習を通じて、コードが画面に反映される楽しさや、できなかった実装を完成させる達成感を味わい、Webコーダーを志望するように。</span>
+                    <span>現在は家業と両立しながら就職活動を行う。</span>
+                </p>
+            </div>
+
+            <!-- img -->
+            <div class="p-about-profile__img">
+                <img src="assets/img/about-img.jpg" alt="ポートフォリオ作成者のプロフィール写真" width="295" height="295">
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="l-footer">
+        <div class="l-footer__inner">
+            <div class="l-footer__logo">
+                matsuyama rikiya
+            </div>
+
+            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+                <ul class="l-footer__list">
+                    <li class="l-footer__item"><a class="u-link" href="index.html">top</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="works.html">works</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="about.html">about</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="contact/">contact</a></li>
+                </ul>
+            </nav>
+
+            <p class="l-footer__copyright">©2027 MATSUYAMA RIKUYA</p>
+        </div>
+    </footer>
 
     <script src="assets/js/main.js" type="module"></script>
 </body>

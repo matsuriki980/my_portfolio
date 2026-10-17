@@ -1,0 +1,100 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  about-profile
+-------------------------------------- */
+.p-about-profile {
+  background: g.$color-bg-light;
+}
+
+.p-about-profile__inner {
+  padding-block: 80rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.media() {
+    padding-block: 80px;
+    grid-template-columns: 1fr 480rem;
+    gap: 80rem;
+    align-items: center;
+  }
+}
+
+.p-about-profile__content {
+  order: 2;
+
+  @include g.media() {
+    order: 1;
+    width: 100%;
+  }
+}
+
+.p-about-profile__title-wrapper {
+  margin-bottom: 40rem;
+
+  @include g.media() {
+    margin-bottom: 40px;
+  }
+}
+
+.p-about-profile__name-wrapper {
+  margin-bottom: 24rem;
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+
+  @include g.media() {
+    margin-bottom: 24px;
+    gap: 24px;
+  }
+}
+
+.p-about-profile__name-ja {
+  font-size: 24rem;
+  font-weight: g.$font-weight-medium;
+
+  @include g.media() {
+    font-size: clamp(24px, 24rem, 32px);
+  }
+}
+
+.p-about-profile__name-en {
+  font-size: 16rem;
+  text-transform: uppercase;
+
+  @include g.media() {
+    font-size: clamp(14px, 16rem, 16px);
+    margin-top: 4px;
+  }
+}
+
+.p-about-profile__text {
+  font-size: 14rem;
+  font-weight: g.$font-weight-regular;
+  line-height: 2;
+  margin-bottom: 40rem;
+
+  span {
+    display: block;
+  }
+
+  @include g.media() {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+.p-about-profile__img {
+  margin-bottom: 48rem;
+
+  @include g.media() {
+    order: 2;
+    margin-bottom: 0;
+    height: 100%;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
