@@ -831,6 +831,11 @@ body {
 .p-top-works__inner {
   padding-block: 80rem;
 }
+@media (width >= 900px) {
+  .p-top-works__inner {
+    padding-block: 80px;
+  }
+}
 
 .p-top-works__title-wrapper {
   margin-bottom: 40rem;

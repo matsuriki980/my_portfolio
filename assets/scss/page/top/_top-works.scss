@@ -10,6 +10,10 @@
 
 .p-top-works__inner {
   padding-block: 80rem;
+
+  @include g.media() {
+    padding-block: 80px;
+  }
 }
 
 .p-top-works__title-wrapper {
