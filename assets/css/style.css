@@ -226,7 +226,7 @@ body {
 }
 @media (width >= 900px) {
   .c-title__en {
-    font-size: 64rem;
+    font-size: clamp(64px, 64rem, 80px);
   }
 }
 
