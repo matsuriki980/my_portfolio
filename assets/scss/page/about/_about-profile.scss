@@ -13,7 +13,7 @@
   grid-template-columns: 1fr;
 
   @include g.media() {
-    padding-block: 80px;
+    padding-block: 120px;
     grid-template-columns: 1fr 480rem;
     gap: 80rem;
     align-items: center;
