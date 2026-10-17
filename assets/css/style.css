@@ -1006,7 +1006,7 @@ body {
 }
 @media (width >= 900px) {
   .p-top-about__inner {
-    padding-block: 80px;
+    padding-block: 120px;
     grid-template-columns: 1fr 480rem;
     gap: 80rem;
     align-items: center;
