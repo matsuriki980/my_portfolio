@@ -102,10 +102,11 @@
 /* wrapper */
 .u-wrapper {
   padding-inline: 24rem;
-  max-width: 1600px;
-  margin: 0 auto;
 
   @include g.media() {
-    padding-inline: 80rem;
+    padding: 0;
+    margin: 0 auto;
+    width: 83.333%;
+    max-width: 1520px;
   }
 }
