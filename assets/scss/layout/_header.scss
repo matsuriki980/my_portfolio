@@ -23,9 +23,9 @@
   align-items: center;
   justify-content: space-between;
 
-    @include g.media() {
-      padding-inline: 80rem;
-    }
+  @include g.media() {
+    padding-inline: 80rem;
+  }
 }
 
 .l-header__logo {
@@ -36,7 +36,7 @@
     text-transform: uppercase;
 
     @include g.media() {
-      font-size: 24px;
+      font-size: clamp(24px, 24rem, 36px);
     }
   }
 }
