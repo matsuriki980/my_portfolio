@@ -1,0 +1,64 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  top-fv
+-------------------------------------- */
+.p-top-fv {
+  height: 600rem;
+
+  @include g.media() {
+    height: 800rem;
+  }
+}
+
+.p-top-fv__inner {
+  height: 100%;
+  padding-inline: 24rem;
+  display: grid;
+  align-items: center;
+
+  @include g.media() {
+    padding-inline: 80rem;
+  }
+}
+
+.p-top-fv__title-en {
+  font-size: 48rem;
+  font-family: g.$font-family-en;
+  font-weight: g.$font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.23;
+  margin-bottom: 10rem;
+
+  @include g.media() {
+    font-size: max(72px, 96rem);
+    margin-bottom: 10px;
+  }
+}
+
+.p-top-fv__title-line-break {
+  display: block;
+}
+
+.p-top-fv__title-color-accent {
+  color: g.$color-accent;
+}
+
+.p-top-fv__title-ja {
+  font-weight: g.$font-weight-regular;
+  line-height: 1.75;
+  font-size: 16rem;
+
+  span {
+    display: block;
+  }
+
+  @include g.media() {
+    font-size: max(16px, 18rem);
+
+    span {
+      display: inline-block;
+    }
+  }
+}
