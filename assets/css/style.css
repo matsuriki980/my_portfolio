@@ -206,7 +206,6 @@ body {
   padding-inline: 24rem;
   max-width: 1440px;
   margin: 0 auto;
-  background: #f5f5f5;
 }
 @media (width >= 900px) {
   .u-wrapper {
@@ -819,6 +818,45 @@ body {
   .p-top-fv__title-ja span {
     display: inline-block;
   }
+}
+
+/* --------------------------------------
+  top-works
+-------------------------------------- */
+.p-top-works {
+  background: #f5f5f5;
+}
+
+.p-top-works__inner {
+  padding-block: 80rem;
+}
+
+.p-top-works__title-wrapper {
+  margin-bottom: 40rem;
+  text-align: center;
+}
+@media (width >= 900px) {
+  .p-top-works__title-wrapper {
+    margin-bottom: 80rem;
+  }
+}
+
+.p-top-works__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80rem;
+  margin-bottom: 64rem;
+}
+@media (width >= 900px) {
+  .p-top-works__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56rem;
+    margin-bottom: 80rem;
+  }
+}
+
+.p-top-works__btn {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
