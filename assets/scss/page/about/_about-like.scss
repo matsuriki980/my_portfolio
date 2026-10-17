@@ -1,0 +1,61 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  about-like
+-------------------------------------- */
+
+.p-about-like__inner {
+  padding-block: 80rem;
+
+  @include g.media() {
+    padding-block: 120px;
+  }
+}
+
+.p-about-like__title-wrapper {
+  margin-bottom: 40rem;
+  text-align: center;
+
+  @include g.media() {
+    margin-bottom: 80px;
+  }
+}
+
+.p-about-like__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 72rem;
+
+  @include g.media() {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64rem;
+  }
+}
+
+.p-about-like__img {
+  margin-bottom: 12rem;
+
+  @include g.media() {
+    margin-bottom: 16px;
+  }
+}
+.p-about-like__item-title {
+  font-size: 20rem;
+  font-weight: g.$font-weight-medium;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+
+  @include g.media() {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+}
+
+.p-about-like__text {
+  font-size: 14rem;
+  line-height: 2;
+
+  @include g.media() {
+    font-size: 16px;
+  }
+}
