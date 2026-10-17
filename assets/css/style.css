@@ -583,6 +583,7 @@ body {
   hamburger-menu
 -------------------------------------- */
 .l-hamburger-menu {
+  display: none;
   background-color: #4a90e2;
   position: fixed;
   top: 0;
