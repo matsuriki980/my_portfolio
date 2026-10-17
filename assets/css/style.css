@@ -204,7 +204,7 @@ body {
 /* wrapper */
 .u-wrapper {
   padding-inline: 24rem;
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 @media (width >= 900px) {
@@ -863,6 +863,132 @@ body {
 
 .p-top-works__btn {
   text-align: center;
+}
+
+/* --------------------------------------
+  top-skill
+-------------------------------------- */
+.p-top-skill__inner {
+  padding-block: 80rem;
+}
+@media (width >= 900px) {
+  .p-top-skill__inner {
+    padding-block: 80px;
+  }
+}
+
+.p-top-skill__title-wrapper {
+  margin-bottom: 40rem;
+  text-align: center;
+}
+@media (width >= 900px) {
+  .p-top-skill__title-wrapper {
+    margin-bottom: 80rem;
+  }
+}
+
+.p-top-skill__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32rem;
+  margin-bottom: 80rem;
+}
+@media (width >= 900px) {
+  .p-top-skill__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56rem;
+    margin-bottom: 80px;
+  }
+}
+
+.p-top-skill__card {
+  background: #f5f5f5;
+  padding: 32rem 40rem;
+}
+.p-top-skill__card dt {
+  font-size: 32rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  line-height: 1.219;
+  margin-bottom: 6rem;
+}
+@media (width >= 900px) {
+  .p-top-skill__card dt {
+    margin-bottom: 6px;
+  }
+}
+.p-top-skill__card dd {
+  font-size: 14rem;
+  font-weight: 400;
+  line-height: 2;
+}
+@media (width >= 900px) {
+  .p-top-skill__card dd {
+    font-size: 16px;
+  }
+}
+
+.p-top-skill__tool-title {
+  font-size: 24rem;
+  font-weight: 700;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 32rem;
+}
+.p-top-skill__tool-title::before {
+  content: "";
+  display: block;
+  width: 12rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: #4a90e2;
+}
+@media (width >= 900px) {
+  .p-top-skill__tool-title {
+    font-size: 24px;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .p-top-skill__tool-title::before {
+    width: 12px;
+  }
+}
+
+.p-top-skill__tool-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+}
+@media (width >= 900px) {
+  .p-top-skill__tool-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 72rem;
+  }
+}
+
+.p-top-skill__tool-item dt {
+  font-size: 20rem;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 6rem;
+}
+.p-top-skill__tool-item dd {
+  font-size: 14rem;
+  font-weight: 400;
+  line-height: 2;
+}
+@media (width >= 900px) {
+  .p-top-skill__tool-item dt {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+  .p-top-skill__tool-item dd {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

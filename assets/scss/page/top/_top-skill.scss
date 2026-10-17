@@ -1,0 +1,137 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  top-skill
+-------------------------------------- */
+.p-top-skill {
+}
+
+.p-top-skill__inner {
+  padding-block: 80rem;
+
+  @include g.media() {
+    padding-block: 80px;
+  }
+}
+
+.p-top-skill__title-wrapper {
+  margin-bottom: 40rem;
+  text-align: center;
+
+  @include g.media() {
+    margin-bottom: 80rem;
+  }
+}
+
+.p-top-skill__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32rem;
+  margin-bottom: 80rem;
+
+  @include g.media() {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56rem;
+    margin-bottom: 80px;
+  }
+}
+
+.p-top-skill__card {
+  background: g.$color-bg-light;
+  padding: 32rem 40rem;
+
+  dt {
+    font-size: 32rem;
+    font-weight: g.$font-weight-bold;
+    font-family: g.$font-family-en;
+    text-transform: capitalize;
+    line-height: 1.219;
+    margin-bottom: 6rem;
+
+    @include g.media() {
+      margin-bottom: 6px;
+    }
+  }
+
+  dd {
+    font-size: 14rem;
+    font-weight: g.$font-weight-regular;
+    line-height: 2;
+
+    @include g.media() {
+      font-size: 16px;
+    }
+  }
+}
+
+.p-top-skill__tool {
+}
+
+.p-top-skill__tool-title {
+  font-size: 24rem;
+  font-weight: g.$font-weight-bold;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 32rem;
+
+  // 装飾の〇
+  &::before {
+    content: "";
+    display: block;
+    width: 12rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: g.$color-accent;
+  }
+
+  @include g.media() {
+    font-size: 24px;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    // 装飾の〇
+    &::before {
+      width: 12px;
+    }
+  }
+}
+
+.p-top-skill__tool-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+
+  @include g.media() {
+    grid-template-columns: repeat(3, 1fr);
+    gap:  56px 72rem;
+  }
+}
+
+.p-top-skill__tool-item {
+  dt {
+    font-size: 20rem;
+    line-height: 1.2;
+    font-family: g.$font-family-en;
+    font-weight: g.$font-weight-semibold;
+    margin-bottom: 6rem;
+  }
+
+  dd {
+    font-size: 14rem;
+    font-weight: g.$font-weight-regular;
+    line-height: 2;
+  }
+
+  @include g.media() {
+    dt {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    dd {
+      font-size: 16px;
+    }
+  }
+}
