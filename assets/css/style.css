@@ -201,6 +201,19 @@ body {
   border: 0;
 }
 
+/* wrapper */
+.u-wrapper {
+  padding-inline: 24rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #f5f5f5;
+}
+@media (width >= 900px) {
+  .u-wrapper {
+    padding-inline: 80rem;
+  }
+}
+
 /* --------------------------------------
   title
 -------------------------------------- */

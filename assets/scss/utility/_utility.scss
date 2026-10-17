@@ -1,5 +1,4 @@
-@use "../global/variables" as v;
-@use "../global/mixin" as g;
+@use "../global/" as g;
 
 /* --------------------------------------
   utility
@@ -98,4 +97,16 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* wrapper */
+.u-wrapper {
+  padding-inline: 24rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: g.$color-bg-light;
+
+  @include g.media() {
+    padding-inline: 80rem;
+  }
 }
