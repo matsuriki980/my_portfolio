@@ -1,0 +1,310 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  works-detail
+-------------------------------------- */
+.p-works-detail__inner {
+  padding-bottom: 100rem;
+
+  @include g.media() {
+    padding-bottom: 120px;
+  }
+}
+
+.p-works-detail__head {
+  margin-bottom: 40rem;
+
+  @include g.media() {
+    margin-bottom: 40px;
+  }
+}
+
+.p-works-detail__title {
+  font-size: 24rem;
+  font-family: g.$font-weight-medium;
+  line-height: 1.5;
+  margin-bottom: 14rem;
+
+  @include g.media() {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.p-works-detail__info {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  font-size: 14rem;
+
+  @include g.media() {
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+
+.p-works-detail__category {
+  font-weight: g.$font-weight-medium;
+  color: g.$color-bg;
+  background: g.$color-accent;
+  display: block;
+  padding: 4rem 12rem;
+
+  @include g.media() {
+    padding: 4px 12px;
+  }
+}
+
+.p-works-detail__responsibility {
+  font-weight: g.$font-weight-regular;
+  text-transform: capitalize;
+}
+
+figure {
+  padding: 24rem;
+  background: g.$color-bg-light;
+  margin-bottom: 40rem;
+
+  @include g.media() {
+    padding: 72rem;
+    margin-bottom: 80px;
+  }
+}
+
+.p-works-detail__content {
+  margin-bottom: 80rem;
+
+  @include g.media() {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 560rem;
+    gap: 100rem;
+    align-items: flex-start;
+  }
+}
+
+.p-works-detail__text {
+  margin-bottom: 24rem;
+  font-size: 16rem;
+  font-weight: g.$font-weight-regular;
+  line-height: 2;
+
+  @include g.media() {
+    font-size: clamp(16px, 16rem, 18px);
+  }
+}
+
+.p-works-detail__item {
+  padding-block: 24rem;
+  border-bottom: 1px solid rgba($color: g.$color-text, $alpha: 0.3);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16rem;
+  line-height: 1.2;
+
+  dt {
+    font-size: 18rem;
+    font-weight: g.$font-weight-medium;
+    text-transform: capitalize;
+  }
+
+  dd {
+    font-weight: g.$font-weight-regular;
+  }
+
+  a {
+    text-decoration: underline;
+    color: g.$color-accent;
+  }
+
+  @include g.media() {
+    dt {
+      font-size: 18px;
+    }
+
+    dd {
+      font-size: 16px;
+    }
+
+    // 1つ目のitemのpadding-topを消す
+    &:nth-of-type(1) {
+      padding-top: 0;
+    }
+  }
+}
+
+.p-works-detail__sample-imgs-btns {
+  display: flex;
+  gap: 10rem;
+  margin-bottom: 16rem;
+}
+
+.p-works-detail__sample-imgs-btn {
+  font-size: 18rm;
+  font-family: g.$font-family-en;
+  font-weight: g.$font-weight-medium;
+  display: grid;
+  place-items: center;
+  width: 85rem;
+  height: 36rem;
+  border-radius: 4rem;
+  text-transform: uppercase;
+  background: g.$color-bg-light;
+
+  // 選択中のボタンに背景を付ける
+  &.is-active {
+    color: g.$color-bg;
+    background: g.$color-accent;
+  }
+}
+
+.p-works-detail__sample-imgs {
+  background: g.$color-bg-light;
+  padding: 40rem 24rem;
+  margin-bottom: 40rem;
+
+  @include g.media() {
+    padding: 120rem 80rem;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 70% 22.22%;
+    justify-content: space-between;
+  }
+}
+
+.p-works-detail__explanation-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32rem;
+  margin-bottom: 80rem;
+
+  @include g.media() {
+    gap: 32rem;
+  }
+}
+
+.p-works-detail__explanation-item {
+  dt {
+    font-size: 20rem;
+    font-weight: g.$font-weight-medium;
+    line-height: 2;
+  }
+
+  dd {
+    font-size: 14rem;
+    font-weight: g.$font-weight-regular;
+    line-height: 2;
+    display: inline-block;
+  }
+
+  @include g.media() {
+    display: flex;
+    align-items: center;
+
+    dt {
+      width: 160rem;
+      line-height: 1.5;
+      font-size: 18px;
+    }
+
+    dd {
+      font-size: 16px;
+    }
+
+    // ddが1つの時の幅を指定する
+    &:not(:nth-of-type(3), :nth-of-type(4)) {
+      dd {
+        width: 80%;
+      }
+    }
+
+    // 3つ目のitemにdisplay-blockを指定し改行する
+    &:nth-of-type(4) {
+      dd {
+        span {
+          display: block;
+        }
+      }
+    }
+
+    // ddが複数行の時はaline-items:flex-startを指定
+    &:nth-of-type(4),
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      align-items: flex-start;
+    }
+  }
+}
+
+.p-works-detail__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p-works-detail__pagination-btn {
+  font-size: 20rem;
+  font-weight: g.$font-weight-semibold;
+  text-transform: capitalize;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  transition: color 0.3s;
+
+  @include g.media() {
+    font-size: clamp(20px, 20rem, 24px);
+  }
+}
+
+.p-works-detail__pagination-arrow {
+  position: relative;
+  display: inline-block;
+  width: 7.7rem;
+  height: 13.3rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    width: 10px;
+    height: 2px;
+    border-radius: 9999px;
+    background: g.$color-text;
+    transform-origin: calc(100% - 1px) 50%;
+    transition: background 0.3s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.p-works-detail__pagination-btn--prev {
+  flex-direction: row-reverse;
+  .p-works-detail__pagination-arrow {
+    transform: scaleX(-1);
+  }
+}
+
+// btnをhover時、color-accentに変更する
+.p-works-detail__pagination-btn {
+  @include g.media() {
+    &:hover {
+      color: g.$color-accent;
+
+      .p-works-detail__pagination-arrow {
+        &::before,
+        &::after {
+          background: g.$color-accent;
+        }
+      }
+    }
+  }
+}
