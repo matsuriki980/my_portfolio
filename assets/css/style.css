@@ -674,6 +674,34 @@ body {
 }
 
 /* --------------------------------------
+  works-list
+-------------------------------------- */
+.l-works__bg {
+  background: #f5f5f5;
+}
+
+.l-works__inner {
+  padding-block: 80rem;
+}
+@media (width >= 1080px) {
+  .l-works__inner {
+    padding-block: 120px;
+  }
+}
+
+.l-works__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80rem;
+}
+@media (width >= 1080px) {
+  .l-works__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56rem;
+  }
+}
+
+/* --------------------------------------
   footer
 -------------------------------------- */
 .l-footer {

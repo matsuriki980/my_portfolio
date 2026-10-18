@@ -1,0 +1,28 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  works-list
+-------------------------------------- */
+
+.l-works__bg {
+  background: g.$color-bg-light;
+}
+
+.l-works__inner {
+  padding-block: 80rem;
+
+  @include g.media() {
+    padding-block: 120px;
+  }
+}
+
+.l-works__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80rem;
+
+  @include g.media() {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56rem;
+  }
+}
