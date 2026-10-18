@@ -26,19 +26,11 @@
 }
 
 .p-top-works__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 80rem;
   margin-bottom: 64rem;
 
   @include g.media() {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 56rem;
     margin-bottom: 80rem;
   }
-}
-
-.p-top-works__item {
 }
 
 .p-top-works__btn {
