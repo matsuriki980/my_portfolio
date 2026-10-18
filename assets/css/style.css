@@ -877,15 +877,10 @@ body {
 }
 
 .p-top-works__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 80rem;
   margin-bottom: 64rem;
 }
 @media (width >= 1080px) {
   .p-top-works__list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 56rem;
     margin-bottom: 80rem;
   }
 }
