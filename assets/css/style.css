@@ -255,9 +255,9 @@ body {
   color: #fff;
   display: grid;
   place-items: center;
-  width: 240px;
-  height: 56px;
-  font-size: 18px;
+  width: 240rem;
+  height: 64rem;
+  font-size: 18rem;
   transition: background 0.3s, color 0.3s;
 }
 .c-btn--back {
@@ -266,6 +266,11 @@ body {
   color: #333;
 }
 @media (width >= 1080px) {
+  .c-btn {
+    height: 64px;
+    font-size: 18px;
+    width: 240px;
+  }
   .c-btn:hover, .c-btn--back:hover {
     border: 1px solid #4a90e2;
     background: transparent;

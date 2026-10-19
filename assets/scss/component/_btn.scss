@@ -19,9 +19,9 @@
   color: g.$color-bg;
   display: grid;
   place-items: center;
-  width: 240px;
-  height: 56px;
-  font-size: 18px;
+  width: 240rem;
+  height: 64rem;
+  font-size: 18rem;
   transition:
     background 0.3s,
     color 0.3s;
@@ -34,6 +34,10 @@
   }
 
   @include g.media() {
+    height: 64px;
+    font-size: 18px;
+    width: 240px;
+
     // ボタンをホバーした時のスタイル
     &:hover,
     &--back:hover {
