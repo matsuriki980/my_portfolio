@@ -143,6 +143,32 @@
   font-size: 16rem;
   font-weight: g.$font-weight-regular;
   line-height: 2;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+
+  input {
+    appearance: none;
+    background: g.$color-bg-light;
+    width: 16rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+
+    // 選択中の青〇
+    &:checked::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 65%;
+      aspect-ratio: 1/1;
+      background: g.$color-accent;
+      border-radius: 50%;
+    }
+  }
 
   @include g.media() {
     font-size: clamp(16px, 16rem, 18px);

@@ -1906,6 +1906,29 @@ figure {
   font-size: 16rem;
   font-weight: 400;
   line-height: 2;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+.p-contact-form__radio input {
+  appearance: none;
+  background: #f5f5f5;
+  width: 16rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: relative;
+}
+.p-contact-form__radio input:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 65%;
+  aspect-ratio: 1/1;
+  background: #4a90e2;
+  border-radius: 50%;
 }
 @media (width >= 1080px) {
   .p-contact-form__radio {
