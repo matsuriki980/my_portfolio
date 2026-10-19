@@ -1,0 +1,192 @@
+@use "../../global/" as g;
+
+/* --------------------------------------
+  contact
+-------------------------------------- */
+
+.p-contact {
+}
+
+.p-contact__inner {
+  padding: 0 24rem 80rem;
+
+  @include g.media() {
+    padding: 0 280rem 120px;
+  }
+}
+
+// step
+.p-contact__step-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32rem;
+  position: relative;
+
+  @include g.media() {
+    grid-template-columns: repeat(3, clamp(104px, 104rem, 114px));
+    justify-content: center;
+  }
+
+  // 背景の線
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: g.$color-text;
+    opacity: 0.5;
+    width: 100%;
+    height: 1rem;
+    z-index: g.$z-index-negative;
+
+    @include g.media() {
+      width: 30%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+  }
+}
+
+.p-contact__step-item {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: g.$color-bg-light;
+  align-self: center;
+  align-content: center;
+
+  // 現在地は背景を水色に
+  &.is-active {
+    background: g.$color-accent;
+    color: g.$color-bg;
+  }
+}
+
+.p-contact__step-text-en {
+  opacity: 0.5;
+  font-size: 24rem;
+  font-family: g.$font-family-en;
+  line-height: 1;
+
+  @include g.media() {
+    font-size: clamp(24px, 24rem, 28px);
+  }
+}
+
+.p-contact__step-text-ja {
+  font-size: 14rem;
+  font-weight: g.$font-weight-medium;
+
+  @include g.media() {
+    font-size: clamp(16px, 16rem, 18px);
+  }
+}
+
+.p-contact-form__list {
+  margin-bottom: 40rem;
+
+  @include g.media() {
+    margin-bottom: 56px;
+    max-width: 960px;
+    margin-inline: auto;
+  }
+}
+
+.p-contact-form__item {
+  padding-block: 24rem;
+  border-bottom: 1px solid rgba($color: g.$color-text, $alpha: 0.3);
+
+  // 1つ目の項目のpadding-topを削除
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  @include g.media() {
+    padding-block: 24px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 35% 1fr;
+  }
+}
+
+.p-contact-form__title {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+
+  @include g.media() {
+    gap: 20px;
+  }
+}
+
+.p-contact-form__required {
+  font-size: 12rem;
+  font-weight: g.$font-weight-medium;
+  color: g.$color-accent;
+
+  @include g.media() {
+    font-size: 14px;
+  }
+}
+
+.p-contact-form__radio-group {
+  display: flex;
+  align-items: center;
+  gap: 32rem;
+
+  @include g.media() {
+    gap: 32px;
+  }
+}
+
+.p-contact-form__radio {
+  font-size: 16rem;
+  font-weight: g.$font-weight-regular;
+  line-height: 2;
+
+  @include g.media() {
+    font-size: clamp(16px, 16rem, 18px);
+  }
+}
+
+.p-contact-form__text {
+  display: block;
+  width: 100%;
+  background: g.$color-bg-light;
+  height: 48rem;
+  padding: 4rem 8rem;
+  font-size: 16rem;
+
+  @include g.media() {
+    padding-inline: 16px;
+    height: 48px;
+    font-size: 16px;
+  }
+}
+
+// お問い合わせ内容エリア
+.p-contact-form__item:has(textarea) {
+  @include g.media() {
+    align-items: flex-start;
+
+    .p-contact-form__title {
+      line-height: 2;
+    }
+  }
+}
+
+textarea.p-contact-form__text {
+  padding-top: 16rem;
+  line-height: 2;
+  height: 400rem;
+
+  @include g.media() {
+    padding-top: 8px;
+    height: 240px;
+  }
+}
+
+.p-contact-form__btn {
+  display: flex;
+  justify-content: center;
+}
