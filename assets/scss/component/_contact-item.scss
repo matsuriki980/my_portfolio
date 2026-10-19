@@ -1,0 +1,36 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  contact-item
+-------------------------------------- */
+.c-contact__item {
+  padding-block: 24rem;
+  border-bottom: 1px solid rgba($color: g.$color-text, $alpha: 0.3);
+
+  @include g.media() {
+    padding-block: 24px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 35% 1fr;
+  }
+}
+
+.c-contact__title {
+  font-size: 20rem;
+  font-weight: g.$font-weight-medium;
+  line-height: 1.2;
+  margin-bottom: 16rem;
+
+  @include g.media() {
+    font-size: clamp(18px, 20rem, 20px);
+    margin-bottom: 0;
+  }
+}
+
+.c-contact__text {
+  font-size: 16rem;
+
+  @include g.media() {
+    font-size: clamp(16px, 16rem, 18px);
+  }
+}
