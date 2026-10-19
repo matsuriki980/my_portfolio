@@ -7,7 +7,7 @@
     <title>入力内容確認 | ポートフォリオ</title>
 
     <!-- OGP設定 -->
-    <meta property="og:url" content="https://matsuyamarikiya.jp/portfolio/contact/confirm.html">
+    <meta property="og:url" content="https://matsuyamarikiya.jp/portfolio/contact/confirm/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="入力内容確認 | ポートフォリオ">
     <meta property="og:description" content="未経験からWebコーダーを目指す松山里貴弥のポートフォリオサイトです。これまでに制作したWebサイトや、学習中のスキルなどを紹介しています。">
@@ -21,12 +21,143 @@
         rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
 
-    <script src="assets/js/main.js" type="module"></script>
+    <!-- header -->
+    <header class="l-header">
+        <div class="l-header__inner">
+            <div class="l-header__logo">
+                <a href="../../" class="u-link">matsuyama rikiya</a>
+            </div>
+
+            <nav class="l-header__nav">
+                <ul class="l-header__nav-list">
+                    <li class="l-header__nav-item"><a href="../../">top</a></li>
+                    <li class="l-header__nav-item"><a href="../../works/">works</a></li>
+                    <li class="l-header__nav-item"><a href="../../about/">about</a></li>
+                    <li class="l-header__nav-item l-header__nav-item--contact"><a href="../../contact/">contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="l-header__hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- hamburger-menu -->
+    <nav class="l-hamburger-menu u-pc-hidden u-pi" aria-label="ハンバーガーメニュー">
+        <ul class="l-hamburger-menu__list">
+            <li class="l-hamburger-menu__item"><a href="../../">top</a></li>
+            <li class="l-hamburger-menu__item"><a href="../../works/">works</a></li>
+            <li class="l-hamburger-menu__item"><a href="../../about/">about</a></li>
+            <li class="l-hamburger-menu__item"><a href="../../contact/">contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- fv -->
+        <div class="fv-sub-page">
+            <div class="fv-sub-page__inner">
+                <div class="fv-sub-page__title-wrapper">
+                    <p class="fv-sub-page__title-en">contact</p>
+                    <p class="fv-sub-page__title-ja">お問い合わせ</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="p-confirm">
+            <div class="l-contact-inner">
+
+                <!-- head -->
+                <div class="c-contact-head">
+                    <h1 class="c-contact-head__title">入力内容確認</h1>
+                    <p class="c-contact-head__lead">
+                        入力内容を確認の上、 問題なければ「送信する」ボタンをクリックしてください。
+                    </p>
+
+                    <ol class="p-contact__step-list">
+                        <li class="p-contact__step-item">
+                            <span class="p-contact__step-text-en">01</span>
+                            <p class="p-contact__step-text-ja">入力画面</p>
+                        </li>
+                        <li class="p-contact__step-item is-active">
+                            <span class="p-contact__step-text-en">02</span>
+                            <p class="p-contact__step-text-ja">入力確認</p>
+                        </li>
+                        <li class="p-contact__step-item">
+                            <span class="p-contact__step-text-en">03</span>
+                            <p class="p-contact__step-text-ja">送信完了</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- list -->
+                <dl class="p-confirm__list">
+                    <div class="c-contact__item">
+                        <dt class="c-contact__title">お問い合わせの種類</dt>
+                        <dd class="c-contact__text">採用活動について</dd>
+                    </div>
+                    <div class="c-contact__item">
+                        <dt class="c-contact__title">ご氏名・企業名</dt>
+                        <dd class="c-contact__text">松山 里貴弥</dd>
+                    </div>
+                    <div class="c-contact__item">
+                        <dt class="c-contact__title">メールアドレス</dt>
+                        <dd class="c-contact__text">matsuriki2026@guerrillamail.com</dd>
+                    </div>
+                    <div class="c-contact__item">
+                        <dt class="c-contact__title">電話番号</dt>
+                        <dd class="c-contact__text">012-3456-7899</dd>
+                    </div>
+                    <div class="c-contact__item">
+                        <dt class="c-contact__title">お問い合わせ内容</dt>
+                        <dd class="c-contact__text">お問い合わせ内容をご入力ください。
+                            採用活動・ご質問など、お気軽にお問い合わせください。</dd>
+                    </div>
+                </dl>
+
+                <!-- btn -->
+                <div class="c-btns">
+                    <button class="c-btn">
+                        入力内容を送信
+                    </button>
+
+
+                    <button class="c-btn c-btn--back">
+                        入力内容を訂正する
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="l-footer">
+        <div class="l-footer__inner">
+            <div class="l-footer__logo">
+                matsuyama rikiya
+            </div>
+
+            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+                <ul class="l-footer__list">
+                    <li class="l-footer__item"><a class="u-link" href="../../">top</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="../../works/">works</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="../../about/">about</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="../../contact/">contact</a></li>
+                </ul>
+            </nav>
+
+            <p class="l-footer__copyright">©2027 MATSUYAMA RIKUYA</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js" type="module"></script>
 </body>
 
 </html>
