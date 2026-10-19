@@ -4,17 +4,6 @@
   contact
 -------------------------------------- */
 
-.p-contact {
-}
-
-.p-contact__inner {
-  padding: 0 24rem 80rem;
-
-  @include g.media() {
-    padding: 0 280rem 120px;
-  }
-}
-
 // step
 .p-contact__step-list {
   display: grid;
@@ -82,30 +71,11 @@
   }
 }
 
-.p-contact-form__list {
-  margin-bottom: 40rem;
-
-  @include g.media() {
-    margin-bottom: 56px;
-    max-width: 960px;
-    margin-inline: auto;
-  }
-}
-
 .p-contact-form__item {
-  padding-block: 24rem;
-  border-bottom: 1px solid rgba($color: g.$color-text, $alpha: 0.3);
 
   // 1つ目の項目のpadding-topを削除
   &:first-of-type {
     padding-top: 0;
-  }
-
-  @include g.media() {
-    padding-block: 24px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 35% 1fr;
   }
 }
 
@@ -181,12 +151,10 @@
   background: g.$color-bg-light;
   height: 48rem;
   padding: 4rem 8rem;
-  font-size: 16rem;
 
   @include g.media() {
     padding-inline: 16px;
     height: 48px;
-    font-size: 16px;
   }
 }
 
