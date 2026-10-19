@@ -7,8 +7,10 @@
   font-size: 20rem;
   font-weight: g.$font-weight-medium;
   line-height: 1.2;
+  margin-bottom: 16rem;
 
   @include g.media() {
     font-size: clamp(18px, 20rem, 20px);
+    margin-bottom: 0;
   }
 }

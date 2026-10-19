@@ -440,8 +440,13 @@ body {
   contact-head
 -------------------------------------- */
 .c-contact-head {
-  margin-bottom: 40rem;
+  margin-bottom: 80rem;
   text-align: center;
+}
+@media (width >= 1080px) {
+  .c-contact-head {
+    margin-bottom: 80px;
+  }
 }
 
 .c-contact-head__title {
@@ -460,6 +465,7 @@ body {
 .c-contact-head__lead {
   line-height: 2;
   font-size: 16rem;
+  margin-bottom: 24rem;
 }
 .c-contact-head__lead span {
   display: block;
@@ -467,6 +473,7 @@ body {
 @media (width >= 1080px) {
   .c-contact-head__lead {
     font-size: 18px;
+    margin-bottom: 40px;
   }
 }
 
@@ -477,10 +484,12 @@ body {
   font-size: 20rem;
   font-weight: 500;
   line-height: 1.2;
+  margin-bottom: 16rem;
 }
 @media (width >= 1080px) {
   .c-contact-form__title {
     font-size: clamp(18px, 20rem, 20px);
+    margin-bottom: 0;
   }
 }
 
