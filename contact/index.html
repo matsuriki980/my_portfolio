@@ -75,8 +75,9 @@
 
         <section class="p-contact">
 
-            <div class="p-contact__inner">
+            <div class="l-contact__inner">
 
+                <!-- head -->
                 <div class="c-contact-head">
                     <h2 class="c-contact-head__title">お問い合わせフォーム</h2>
                     <p class="c-contact-head__lead">
@@ -102,12 +103,12 @@
 
                 <!-- form -->
                 <form class="p-contact-form" action="">
-                    <div class="p-contact-form__list">
+                    <div class="l-contact__list">
 
                         <!-- contact-type -->
-                        <div class="p-contact-form__item">
+                        <div class="p-contact-form__item c-contact__item">
                             <div class="p-contact-form__title-wrapper c-contact-form__title-wrapper">
-                                <p id="contact-type-title" class="p-contact-form__title c-contact-form__title">
+                                <p id="contact-type-title" class="p-contact-form__title c-contact__title">
                                     お問い合わせの種類
                                     <span class="p-contact-form__required">必須</span>
                                 </p>
@@ -128,54 +129,55 @@
                         </div>
 
                         <!-- user-name・company-name  -->
-                        <div class="p-contact-form__item">
+                        <div class="p-contact-form__item c-contact__item">
 
                             <div class="p-contact-form__title-wrapper c-contact-form__title-wrapper">
-                                <label for="user-name" class="p-contact-form__title c-contact-form__title">
+                                <label for="user-name" class="p-contact-form__title c-contact__title">
                                     ご氏名・企業名
                                     <span class="p-contact-form__required">必須</span>
                                 </label>
                             </div>
 
-                            <input class="p-contact-form__text" type="text" name="user-name" id="user-name"
-                                placeholder="例：松山 里貴弥" required>
+                            <input class="p-contact-form__text c-contact__text" type="text" name="user-name"
+                                id="user-name" placeholder="例：松山 里貴弥" required>
                         </div>
 
                         <!-- e-mail -->
-                        <div class="p-contact-form__item">
+                        <div class="p-contact-form__item c-contact__item">
                             <div class="p-contact-form__title-wrapper c-contact-form__title-wrapper">
-                                <label for="email" class="p-contact-form__title c-contact-form__title">
+                                <label for="email" class="p-contact-form__title c-contact__title">
                                     メールアドレス
                                     <span class="p-contact-form__required">必須</span>
                                 </label>
                             </div>
 
-                            <input class="p-contact-form__text" type="email" name="email" id="email"
+                            <input class="p-contact-form__text c-contact__text" type="email" name="email" id="email"
                                 placeholder="例：matsuriki2026@guerrillamail.com" required>
                         </div>
 
                         <!-- tel -->
-                        <div class="p-contact-form__item">
+                        <div class="p-contact-form__item c-contact__item">
                             <div class="p-contact-form__title-wrapper c-contact-form__title-wrapper">
-                                <label for="tel" class="p-contact-form__title c-contact-form__title">
+                                <label for="tel" class="p-contact-form__title c-contact__title">
                                     電話番号
                                 </label>
                             </div>
 
-                            <input class="p-contact-form__text" type="text" name="tel" id="tel"
+                            <input class="p-contact-form__text c-contact__text" type="text" name="tel" id="tel"
                                 placeholder="例：012-34560-7899">
                         </div>
 
                         <!-- message -->
-                        <div class="p-contact-form__item">
+                        <div class="p-contact-form__item c-contact__item">
                             <div class="p-contact-form__title-wrapper c-contact-form__title-wrapper">
-                                <label for="message" class="p-contact-form__title c-contact-form__title">
+                                <label for="message" class="p-contact-form__title c-contact__title">
                                     お問い合わせ内容
                                     <span class="p-contact-form__required">必須</span>
                                 </label>
                             </div>
 
-                            <textarea class="p-contact-form__text" name="message" id="message" required placeholder="お問い合わせ内容をご入力ください。
+                            <textarea class="p-contact-form__text c-contact__text" name="message" id="message" required
+                                placeholder="お問い合わせ内容をご入力ください。
 採用活動・ご質問などお気軽にお問い合わせください。"></textarea>
                         </div>
                     </div>

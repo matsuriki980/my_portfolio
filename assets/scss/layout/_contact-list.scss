@@ -1,0 +1,14 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  contact-list
+-------------------------------------- */
+.l-contact__list {
+  margin-bottom: 40rem;
+
+  @include g.media() {
+    margin-bottom: 56px;
+    max-width: 960px;
+    margin-inline: auto;
+  }
+}
