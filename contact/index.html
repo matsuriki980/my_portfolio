@@ -7,7 +7,7 @@
     <title>お問い合わせフォーム | ポートフォリオ</title>
 
     <!-- OGP設定 -->
-    <meta property="og:url" content="https://matsuyamarikiya.jp/portfolio/contact/index.html">
+    <meta property="og:url" content="https://matsuyamarikiya.jp/my_portfolio/contact/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="お問い合わせフォーム | ポートフォリオ">
     <meta property="og:description" content="未経験からWebコーダーを目指す松山里貴弥のポートフォリオサイトです。これまでに制作したWebサイトや、学習中のスキルなどを紹介しています。">
@@ -21,12 +21,165 @@
         rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
-    <script src="assets/js/main.js" type="module"></script>
+    <!-- header -->
+    <header class="l-header">
+        <div class="l-header__inner">
+            <div class="l-header__logo">
+                <a href="../" class="u-link">matsuyama rikiya</a>
+            </div>
+
+            <nav class="l-header__nav">
+                <ul class="l-header__nav-list">
+                    <li class="l-header__nav-item"><a href="../">top</a></li>
+                    <li class="l-header__nav-item"><a href="../works/">works</a></li>
+                    <li class="l-header__nav-item"><a href="../about/">about</a></li>
+                    <li class="l-header__nav-item l-header__nav-item--contact"><a href="">contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="l-header__hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- hamburger-menu -->
+    <nav class="l-hamburger-menu u-pc-hidden u-pi" aria-label="ハンバーガーメニュー">
+        <ul class="l-hamburger-menu__list">
+            <li class="l-hamburger-menu__item"><a href="../">top</a></li>
+            <li class="l-hamburger-menu__item"><a href="../works/">works</a></li>
+            <li class="l-hamburger-menu__item"><a href="../about/">about</a></li>
+            <li class="l-hamburger-menu__item"><a href="">contact</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+        <!-- fv -->
+        <div class="fv-sub-page">
+            <div class="fv-sub-page__inner">
+                <div class="fv-sub-page__title-wrapper">
+                    <h1 class="fv-sub-page__title-en">contact</h1>
+                    <p class="fv-sub-page__title-ja">お問い合わせ</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="p-contact">
+
+            <div class="p-contact__inner">
+
+                <div class="c-contact-head">
+                    <h2 class="c-contact-head__title">お問い合わせフォーム</h2>
+                    <p class="c-contact-head__lead">
+                        <span>以下のフォームにご入力いただき、</span>
+                        <span>「入力内容を確認する」ボタンをクリックしてください。</span>
+                    </p>
+                </div>
+
+                <!-- form -->
+                <form class="p-contact-form" action="">
+                    <div class="p-contact-form__list">
+
+                        <!-- contact-type -->
+                        <fieldset class="p-contact-form__item">
+                            <legend class="p-contact-form__title c-contact-form__title">
+                                お問い合わせの種類
+                                <span class="p-contact-form__required">必須</span>
+                            </legend>
+
+                            <div class="p-contact-form__radio-group">
+                                <label class="p-contact-form__radio">
+                                    <input type="radio" name="contact-type" value="recruitment" required>
+                                    <span>採用活動について</span>
+                                </label>
+
+                                <label class="p-contact-form__radio">
+                                    <input type="radio" name="contact-type" value="others">
+                                    <span>その他</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- user-name・company-name  -->
+                        <div class="p-contact-form__item">
+                            <label for="user-name" class="p-contact-form__title c-contact-form__title">
+                                ご氏名・企業名
+                                <span class="p-contact-form__required">必須</span>
+                            </label>
+
+                            <input class="p-contact-form__text" type="text" name="user-name" id="user-name" required>
+                        </div>
+
+                        <!-- e-mail -->
+                        <div class="p-contact-form__item">
+                            <label for="email" class="p-contact-form__title c-contact-form__title">
+                                メールアドレス
+                                <span class="p-contact-form__required">必須</span>
+                            </label>
+
+                            <input class="p-contact-form__text" type="email" name="email" id="email" required>
+                        </div>
+
+                        <!-- tel -->
+                        <div class="p-contact-form__item">
+                            <label for="tel" class="p-contact-form__title c-contact-form__title">
+                                電話番号
+                            </label>
+
+                            <input class="p-contact-form__text" type="text" name="tel" id="tel">
+                        </div>
+
+                        <!-- message -->
+                        <div class="p-contact-form__item">
+                            <label for="message" class="p-contact-form__title c-contact-form__title">
+                                お問い合わせ内容
+                                <span class="p-contact-form__required">必須</span>
+                            </label>
+
+                            <textarea class="p-contact-form__text" name="message" id="message" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- btn -->
+                    <button class="c-btn" type="submit">入力内容を確認する</button>
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="l-footer">
+        <div class="l-footer__inner">
+            <div class="l-footer__logo">
+                matsuyama rikiya
+            </div>
+
+            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+                <ul class="l-footer__list">
+                    <li class="l-footer__item"><a class="u-link" href="../">top</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="../works/">works</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="../about/">about</a></li>
+                    <li class="l-footer__item"><a class="u-link" href="">contact</a></li>
+                </ul>
+            </nav>
+
+            <p class="l-footer__copyright">©2027 MATSUYAMA RIKUYA</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js" type="module"></script>
 </body>
 
 </html>
