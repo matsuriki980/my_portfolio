@@ -1,0 +1,12 @@
+@use "../global/" as g;
+
+/* --------------------------------------
+  contact-inner
+-------------------------------------- */
+.l-contact-inner {
+  padding: 0 24rem 80rem;
+
+  @include g.media() {
+    padding: 0 280rem 120px;
+  }
+}
