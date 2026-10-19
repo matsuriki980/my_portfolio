@@ -471,6 +471,20 @@ body {
 }
 
 /* --------------------------------------
+  contact-title
+-------------------------------------- */
+.c-contact-form__title {
+  font-size: 20rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+@media (width >= 1080px) {
+  .c-contact-form__title {
+    font-size: clamp(18px, 20rem, 20px);
+  }
+}
+
+/* --------------------------------------
   header
 -------------------------------------- */
 .l-header {
