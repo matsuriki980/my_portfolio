@@ -4,10 +4,11 @@
 
 export function initConfirm() {
   const contactConfirm = document.querySelector(".js-confirm");
-  const confirmBtn = contactConfirm.querySelector(".c-btn");
-  const confirmBtnBack = contactConfirm.querySelector(".c-btn--back");
 
   if (!contactConfirm) return;
+
+  const confirmBtn = contactConfirm.querySelector(".c-btn");
+  const confirmBtnBack = contactConfirm.querySelector(".c-btn--back");
 
   const savedData = sessionStorage.getItem("formInputValues");
 

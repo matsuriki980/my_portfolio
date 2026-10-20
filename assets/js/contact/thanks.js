@@ -3,5 +3,14 @@
 */
 
 export function initThanks() {
-  console.log("お問い合わせThank you画面が初期化されました。");
+  const contactThanks = document.querySelector(".js-thanks");
+
+  if (!contactThanks) return;
+
+  const thanksBtn = contactThanks.querySelector(".c-btn");
+
+  // ボタンクリックでトップページに移動する
+  thanksBtn.addEventListener("click", () => {
+    window.location.href = "/";
+  });
 }
