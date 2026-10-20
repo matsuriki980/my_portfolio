@@ -42,14 +42,54 @@ export function initConfirm() {
     // ----------------------------------------------------------------------------
 
     // 送信ボタンをクリックでデータを送信後、削除して送信完了ページに移動する
-    confirmBtn.addEventListener("click", () => {
-      sessionStorage.removeItem("formInputValues");
-      window.location.href = "/contact/thanks/";
+    confirmBtn.addEventListener("click", async () => {
+      // 二重送信を防ぐ
+      confirmBtn.disabled = true;
+      confirmBtn.textContent = "送信中…";
+
+      // FormspreeのIDを書く
+      const FORMSPREE_ENDPOINT = "https://formspree.io/f/mbgdeqll";
+
+      // Formspreeへ送るデータ
+      const submitData = {
+        contactType: formInputValues.contactTypeValue,
+        name: formInputValues.name,
+        email: formInputValues.email,
+        tel: formInputValues.tel,
+        message: formInputValues.message,
+      };
+
+      try {
+        // Formspreeへの送信処理を書く
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(submitData),
+        });
+
+        // 送信失敗なら、完了ページへ行かない
+        if (!response.ok) {
+          throw new Error("送信に失敗しました");
+        }
+
+        // 成功したら保存データを削除し、完了ページへ移動
+        sessionStorage.removeItem("formInputValues");
+        window.location.href = "/my_portfolio/contact/thanks/";
+      } catch (error) {
+        // 失敗時は確認ページに留まる
+        if (sendStatus) {
+          sendStatus.textContent =
+            "送信できませんでした。時間をおいて再度お試しください。";
+        }
+      }
     });
 
     // 訂正ボタンをクリックで入力ページに戻る
     confirmBtnBack.addEventListener("click", () => {
-      window.location.href = "/contact/";
+      window.location.href = "/my_portfolio/contact/";
     });
   }
 }
