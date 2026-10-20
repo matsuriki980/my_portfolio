@@ -52,6 +52,7 @@ export function initConfirm() {
 
       // Formspreeへ送るデータ
       const submitData = {
+        subject: "ポートフォリオサイトにお問い合わせが来ています",
         contactType: formInputValues.contactTypeValue,
         name: formInputValues.name,
         email: formInputValues.email,
