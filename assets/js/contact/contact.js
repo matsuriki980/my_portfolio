@@ -31,6 +31,6 @@ export function initContactForm() {
     sessionStorage.setItem("formInputValues", JSON.stringify(formInputValues));
 
     // 入力確認ページに移動する
-    window.location.href = "/contact/confirm/";
+    window.location.href = "/my_portfolio/contact/confirm/";
   });
 }
