@@ -11,6 +11,6 @@ export function initThanks() {
 
   // ボタンクリックでトップページに移動する
   thanksBtn.addEventListener("click", () => {
-    window.location.href = "/";
+    window.location.href = "/my_portfolio/";
   });
 }
