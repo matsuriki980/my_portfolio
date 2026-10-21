@@ -43,6 +43,7 @@
     font-weight: g.$font-weight-bold;
     font-family: g.$font-family-en;
     text-transform: uppercase;
+    transition: color 0.3s;
 
     @include g.media() {
       font-size: clamp(24px, 24rem, 36px);
@@ -162,6 +163,15 @@
         bottom: 49%;
         transform: rotate(45deg) translate(-50%, -50%);
       }
+    }
+  }
+}
+
+// ハンバーガーメニューopen時のスタイル
+.l-header {
+  &.is-open {
+    .l-header__logo {
+      color: g.$color-bg;
     }
   }
 }
