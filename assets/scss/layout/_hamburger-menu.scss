@@ -4,29 +4,38 @@
   hamburger-menu
 -------------------------------------- */
 .l-hamburger-menu {
-    display: none;
-    background-color: g.$color-accent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  background-color: g.$color-accent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s;
+
+  // ハンバーガーメニューopen時
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .l-hamburger-menu__list {
-    padding-top: 100rem;
+  padding-top: 100rem;
 }
 
 .l-hamburger-menu__item {
-
-    a {
-        display: block;
-        font-size: 20rem;
-        font-weight: g.$font-weight-semibold;
-        font-family: g.$font-family-en;
-        text-transform: uppercase;
-        color: g.$color-bg;
-        padding: 24rem 0;
-        border-bottom: 1px solid g.$color-bg;
-    }
+  a {
+    display: block;
+    font-size: 20rem;
+    font-weight: g.$font-weight-semibold;
+    font-family: g.$font-family-en;
+    text-transform: uppercase;
+    color: g.$color-bg;
+    padding: 24rem 0;
+    border-bottom: 1px solid g.$color-bg;
+  }
 }
