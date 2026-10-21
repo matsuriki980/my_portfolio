@@ -43,6 +43,7 @@
     font-weight: g.$font-weight-bold;
     font-family: g.$font-family-en;
     text-transform: uppercase;
+    transition: color 0.3s;
 
     @include g.media() {
       font-size: clamp(24px, 24rem, 36px);
@@ -120,6 +121,11 @@
     width: 32rem;
     height: 1rem;
     background: g.$color-bg;
+    transform-origin: left;
+    transition:
+      width 0.3s,
+      opacity 0.3s,
+      transform 0.3s;
 
     &:nth-of-type(1) {
       top: 20rem;
@@ -137,5 +143,34 @@
 
   @include g.media() {
     display: none;
+  }
+}
+
+// ハンバーガーメニューopen時のスタイル
+.l-header {
+  &.is-open {
+    .l-header__logo {
+      color: g.$color-bg;
+    }
+
+    .l-header__hamburger {
+      span {
+        width: 24rem;
+
+        &:nth-of-type(1) {
+          top: 50%;
+          transform: rotate(-45deg) translate(-50%, -50%);
+        }
+
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          bottom: 49%;
+          transform: rotate(45deg) translate(-50%, -50%);
+        }
+      }
+    }
   }
 }
