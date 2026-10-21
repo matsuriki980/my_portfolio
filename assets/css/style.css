@@ -628,6 +628,8 @@ body {
   width: 32rem;
   height: 1rem;
   background: #fff;
+  transform-origin: left;
+  transition: width 0.3s, opacity 0.3s, transform 0.3s;
 }
 .l-header__hamburger span:nth-of-type(1) {
   top: 20rem;
@@ -643,6 +645,20 @@ body {
   .l-header__hamburger {
     display: none;
   }
+}
+.l-header__hamburger.is-open span {
+  width: 24rem;
+}
+.l-header__hamburger.is-open span:nth-of-type(1) {
+  top: 50%;
+  transform: rotate(-45deg) translate(-50%, -50%);
+}
+.l-header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+.l-header__hamburger.is-open span:nth-of-type(3) {
+  bottom: 49%;
+  transform: rotate(45deg) translate(-50%, -50%);
 }
 
 /* --------------------------------------
