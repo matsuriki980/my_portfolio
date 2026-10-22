@@ -1,5 +1,4 @@
-import { initHeader } from "./module/herder.js";
-import { initHamburgerMenu } from "./module/hamburger-menu.js";
+import { initScript } from "./module/script.js";
 import { initContactForm } from "./contact/contact.js";
 import { initConfirm } from "./contact/confirm.js";
 import { initThanks } from "./contact/thanks.js";
@@ -7,8 +6,7 @@ import { initCareer } from "./scroll/career.js";
 import { initFadeIn } from "./scroll/fade-in.js";
 
 // 初期化
-initHeader();
-initHamburgerMenu();
+initScript();
 initContactForm();
 initConfirm();
 initThanks();
