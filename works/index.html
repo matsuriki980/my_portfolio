@@ -27,7 +27,7 @@
 <body>
 
     <!-- header -->
-    <header class="l-header">
+    <header class="l-header js-header">
         <div class="l-header__inner">
             <div class="l-header__logo">
                 <a href="../" class="u-link">matsuyama rikiya</a>
@@ -42,7 +42,7 @@
                 </ul>
             </nav>
 
-            <button class="l-header__hamburger" aria-label="メニューを開く">
+            <button class="l-header__hamburger js-hamburger__btn" aria-label="メニューを開く">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -51,7 +51,7 @@
     </header>
 
     <!-- hamburger-menu -->
-    <nav class="l-hamburger-menu u-pc-hidden u-pi" aria-label="ハンバーガーメニュー">
+    <nav class="l-hamburger-menu js-hamburger-menu u-pc-hidden u-pi" aria-label="ハンバーガーメニュー">
         <ul class="l-hamburger-menu__list">
             <li class="l-hamburger-menu__item"><a href="../">top</a></li>
             <li class="l-hamburger-menu__item"><a href="">works</a></li>
@@ -60,65 +60,69 @@
         </ul>
     </nav>
 
-    <!-- fv -->
-    <section class="fv-sub-page">
-        <div class="fv-sub-page__inner">
-            <div class="fv-sub-page__title-wrapper">
-                <p class="fv-sub-page__title-en">works</p>
-                <h1 class="fv-sub-page__title-ja">制作物</h1>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <!-- works -->
-    <section class="p-works l-works__bg">
-        <div class="p-works__inner l-works__inner u-wrapper">
-            <ul class="l-works__list">
-                <li class="l-works__item">
-                    <a href="detail/" class="c-works-item">
-                        <div class="c-works-item__img">
-                            <img src="../assets/img/works_01.jpg" width="362" height="232" alt="制作物01">
-                        </div>
-                        <div class="c-works-item__body">
-                            <h2 class="c-works-item__title">制作物のタイトルが入ります</h2>
-                            <div class="c-works-item__info">
-                                <p class="c-works-item__category">自主制作</p>
-                                <p class="c-works-item__responsibility">Coding</p>
+        <!-- fv -->
+        <section class="fv-sub-page">
+            <div class="fv-sub-page__inner">
+                <div class="fv-sub-page__title-wrapper">
+                    <p class="fv-sub-page__title-en">works</p>
+                    <h1 class="fv-sub-page__title-ja">制作物</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- works -->
+        <section class="p-works l-works__bg js-header__scroll-trigger">
+            <div class="p-works__inner l-works__inner u-wrapper">
+                <ul class="l-works__list">
+                    <li class="l-works__item">
+                        <a href="detail/" class="c-works-item">
+                            <div class="c-works-item__img">
+                                <img src="../assets/img/works_01.jpg" width="362" height="232" alt="制作物01">
                             </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="l-works__item">
-                    <a href="detail/" class="c-works-item">
-                        <div class="c-works-item__img">
-                            <img src="../assets/img/works_02.jpg" width="362" height="232" alt="制作物02">
-                        </div>
-                        <div class="c-works-item__body">
-                            <h2 class="c-works-item__title">制作物のタイトルが入ります</h2>
-                            <div class="c-works-item__info">
-                                <p class="c-works-item__category">自主制作</p>
-                                <p class="c-works-item__responsibility">Coding</p>
+                            <div class="c-works-item__body">
+                                <h2 class="c-works-item__title">制作物のタイトルが入ります</h2>
+                                <div class="c-works-item__info">
+                                    <p class="c-works-item__category">自主制作</p>
+                                    <p class="c-works-item__responsibility">Coding</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="l-works__item">
-                    <a href="detail/" class="c-works-item">
-                        <div class="c-works-item__img">
-                            <img src="../assets/img/works_03.jpg" width="362" height="232" alt="制作物03">
-                        </div>
-                        <div class="c-works-item__body">
-                            <h2 class="c-works-item__title">制作物のタイトルが入ります</h2>
-                            <div class="c-works-item__info">
-                                <p class="c-works-item__category">自主制作</p>
-                                <p class="c-works-item__responsibility">Design / Coding</p>
+                        </a>
+                    </li>
+                    <li class="l-works__item">
+                        <a href="detail/" class="c-works-item">
+                            <div class="c-works-item__img">
+                                <img src="../assets/img/works_02.jpg" width="362" height="232" alt="制作物02">
                             </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
+                            <div class="c-works-item__body">
+                                <h2 class="c-works-item__title">制作物のタイトルが入ります</h2>
+                                <div class="c-works-item__info">
+                                    <p class="c-works-item__category">自主制作</p>
+                                    <p class="c-works-item__responsibility">Coding</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="l-works__item">
+                        <a href="detail/" class="c-works-item">
+                            <div class="c-works-item__img">
+                                <img src="../assets/img/works_03.jpg" width="362" height="232" alt="制作物03">
+                            </div>
+                            <div class="c-works-item__body">
+                                <h2 class="c-works-item__title">制作物のタイトルが入ります</h2>
+                                <div class="c-works-item__info">
+                                    <p class="c-works-item__category">自主制作</p>
+                                    <p class="c-works-item__responsibility">Design / Coding</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
 
     <!-- footer -->
     <footer class="l-footer">
@@ -141,7 +145,7 @@
     </footer>
 
 
-    <script src="assets/js/main.js" type="module"></script>
+    <script src="../assets/js/main.js" type="module"></script>
 </body>
 
 </html>
