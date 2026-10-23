@@ -39,6 +39,7 @@
 .p-top-skill__card {
   background: g.$color-bg-light;
   padding: 32rem 40rem;
+  opacity: 0;
 
   dt {
     font-size: 32rem;
@@ -110,6 +111,8 @@
 }
 
 .p-top-skill__tool-item {
+  opacity: 0;
+
   dt {
     font-size: 20rem;
     line-height: 1.2;

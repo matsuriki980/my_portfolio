@@ -994,6 +994,10 @@ body {
   }
 }
 
+.p-top-works__item {
+  opacity: 0;
+}
+
 .p-top-works__btn {
   text-align: center;
 }
@@ -1037,6 +1041,7 @@ body {
 .p-top-skill__card {
   background: #f5f5f5;
   padding: 32rem 40rem;
+  opacity: 0;
 }
 .p-top-skill__card dt {
   font-size: 32rem;
@@ -1102,6 +1107,9 @@ body {
   }
 }
 
+.p-top-skill__tool-item {
+  opacity: 0;
+}
 .p-top-skill__tool-item dt {
   font-size: 20rem;
   line-height: 1.2;

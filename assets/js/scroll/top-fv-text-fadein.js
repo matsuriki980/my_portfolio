@@ -6,8 +6,7 @@ export function initTopFvTextFadeIn() {
   const windowWidth = window.innerWidth;
   const topFVTitleEn = document.querySelector(".p-top-fv__title-en");
   const topFVTitleJa = document.querySelector(".p-top-fv__title-ja");
-  const topFVTitleBreak = document.querySelector(".p-top-fv__title-line-break");
-
+  const topFVTitleBreak = document.querySelectorAll(".p-top-fv__title-line-break");
   if (!topFVTitleEn || !topFVTitleJa || !topFVTitleBreak) return;
 
   let titleWords;
