@@ -103,7 +103,7 @@
         </section>
 
         <!-- strengths -->
-        <section class="p-about-strengths">
+        <section class="p-about-strengths js-fade-in-trigger">
             <div class="p-about-strengths__inner u-wrapper">
                 <div class="c-title__wrapper p-about-strengths__title-wrapper">
                     <p class="c-title__en p-about-strengths__title-en">strengths</p>
@@ -112,21 +112,21 @@
 
                 <!-- list -->
                 <ol class="p-about-strengths__list">
-                    <li class="p-about-strengths__item">
+                    <li class="p-about-strengths__item js-fade-in-item">
                         <h3 class="p-about-strengths__title">課題解決力</h3>
                         <p class="p-about-strengths__text">
                             製造業では、不良品の原因が金型のガス汚れにあると突き止め、洗浄間隔を見直すことで不良品数を約30％削減しました。この経験を活かし、Web制作でも不具合の原因を分析し、適切な改善策を考えて品質向上に貢献します。
                         </p>
                         <span class="p-about-strengths__number">01</span>
                     </li>
-                    <li class="p-about-strengths__item">
+                    <li class="p-about-strengths__item js-fade-in-item">
                         <h3 class="p-about-strengths__title">業務改善力</h3>
                         <p class="p-about-strengths__text">
                             製造業では、金型交換時の作業方法を工夫し、昇温待ち時間を約1時間から20分に短縮しました。この経験を活かし、Web制作でもコードの記述方法や作業手順を見直し、品質を維持しながら制作効率の向上に貢献します。
                         </p>
                         <span class="p-about-strengths__number">02</span>
                     </li>
-                    <li class="p-about-strengths__item">
+                    <li class="p-about-strengths__item js-fade-in-item">
                         <h3 class="p-about-strengths__title">継続力</h3>
                         <p class="p-about-strengths__text">
                             建設業では、現場作業に必要な体力を維持するため、週3〜5回のトレーニングを継続しました。その結果、資材運搬後も安定して作業できるようになりました。この継続力を活かし、Web制作でも学習を積み重ね、技術力を高めていきます。
@@ -236,8 +236,8 @@
                 </div>
 
                 <!-- list -->
-                <ul class="p-about-like__list">
-                    <li class="p-about-like__item">
+                <ul class="p-about-like__list js-fade-in-trigger">
+                    <li class="p-about-like__item js-fade-in-item">
                         <div class="p-about-like__img">
                             <img src="../assets/img/like-martial-arts.jpg" alt="趣味として、MMAやキックボクシング、空手を中心に幅広い競技を鑑賞しています。"
                                 width="327" height="210">
@@ -251,7 +251,7 @@
                             </p>
                         </div>
                     </li>
-                    <li class="p-about-like__item">
+                    <li class="p-about-like__item js-fade-in-item">
                         <div class="p-about-like__img">
                             <img src="../assets/img/like-yakiniku.jpg" alt="焼肉が好きで、月に1度は食べています" width="327"
                                 height="210">
@@ -265,7 +265,7 @@
                             </p>
                         </div>
                     </li>
-                    <li class="p-about-like__item">
+                    <li class="p-about-like__item js-fade-in-item">
                         <div class="p-about-like__img">
                             <img src="../assets/img/like-anime.jpg"
                                 alt="アニメが好きで、バトルアニメを中心に鑑賞しており、中でも「ドラゴンボール」や「NARUTO」が大好きです。" width="327" height="210">
@@ -305,6 +305,11 @@
         </div>
     </footer>
 
+    <!-- GSAPライブラリを読み込む -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrambleTextPlugin.min.js" defer></script>
+
+    <!-- main.jsを読み込む -->
     <script src="../assets/js/main.js" type="module"></script>
 </body>
 

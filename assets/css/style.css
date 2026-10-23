@@ -1356,6 +1356,7 @@ body {
 
 .p-about-strengths__item {
   position: relative;
+  opacity: 0;
 }
 
 .p-about-strengths__title {
@@ -1542,6 +1543,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 64rem;
   }
+}
+
+.p-about-like__item {
+  opacity: 0;
 }
 
 .p-about-like__img {
