@@ -4,18 +4,24 @@
 
 export function initTopFvTextFadeIn() {
   const windowWidth = window.innerWidth;
+  const topFVTitleEn = document.querySelector(".p-top-fv__title-en");
+  const topFVTitleJa = document.querySelector(".p-top-fv__title-ja");
+  const topFVTitleBreak = document.querySelector(".p-top-fv__title-line-break");
+
+  if (!topFVTitleEn || !topFVTitleJa || !topFVTitleBreak) return;
+
   let titleWords;
 
   // 英語テキストは単語単位でフェードイン
   const fvTextEn = () => {
     if (windowWidth < 1080) {
-      const split = SplitText.create(".p-top-fv__title-en", {
+      const split = SplitText.create(topFVTitleEn, {
         type: "words",
       });
 
       titleWords = split.words;
     } else {
-      titleWords = gsap.utils.toArray(".p-top-fv__title-line-break");
+      titleWords = gsap.utils.toArray(topFVTitleBreak);
     }
 
     return gsap.from(titleWords, {
@@ -29,7 +35,7 @@ export function initTopFvTextFadeIn() {
 
   // 日本語テキストは1文字単位でフェードイン
   const fvTextJa = () => {
-    const split = SplitText.create(".p-top-fv__title-ja", {
+    const split = SplitText.create(topFVTitleJa, {
       type: "chars",
     });
 
