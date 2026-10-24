@@ -26,26 +26,28 @@
 }
 
 .p-about-career__border {
-  --line-left: 0px;
-  --line-top: 0px;
-  --line-height: 0px;
+  @include g.media() {
+    --line-left: 0px;
+    --line-top: 0px;
+    --line-height: 0px;
 
-  position: absolute;
-  display: block;
+    position: absolute;
+    display: block;
 
-  left: var(--line-left);
-  top: var(--line-top);
+    left: var(--line-left);
+    top: var(--line-top);
 
-  width: 1px;
-  height: 0;
+    width: 1px;
+    height: 0;
 
-  background: #333;
-  opacity: 0.3;
-  z-index: 1;
-  pointer-events: none;
+    background: #333;
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
 
-  &.is-active {
-    animation: line-extend 1.5s linear 0s forwards;
+    &.is-active {
+      animation: line-extend 1.5s linear 0s forwards;
+    }
   }
 }
 
@@ -85,27 +87,32 @@
 
 .p-about-career__date {
   display: block;
-  font-size: 20rem;
+  font-size: 22rem;
   font-family: g.$font-family-en;
   font-weight: g.$font-weight-bold;
   line-height: 1.2;
   margin-bottom: 18rem;
+  margin-left: 24rem;
 
   @include g.media() {
     font-size: 20px;
-    margin-bottom: 0;
+    margin: 0;
     line-height: 1.8;
   }
 }
 
 .p-about-career__circle {
+  position: absolute;
+  top: 6rem;
+  display: block;
+  width: 12rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: g.$color-accent;
   @include g.media() {
-    display: block;
     width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background: g.$color-accent;
     position: relative;
+    top: auto;
   }
 }
 
