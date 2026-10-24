@@ -672,6 +672,7 @@ body {
 .l-hamburger-menu {
   background-color: #4a90e2;
   position: fixed;
+  z-index: 29;
   top: 0;
   left: 0;
   width: 100%;
