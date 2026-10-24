@@ -60,18 +60,50 @@ export function initFadeIn() {
     });
   };
 
+  // ---------------------------------------------------------
   // 監視オプション
-  const options = {
+  // ---------------------------------------------------------
+
+  // デフォルト
+  const defaultOptions = {
     root: null,
-    rootMargin: "0px 0px -65% 0px",
+    rootMargin: "0px 0px -50% 0px",
     threshold: 0,
   };
 
-  // Observerを生成
-  const observer = new IntersectionObserver(handleIntersect, options);
+  // about-careerセクション用
+  const careerOptions = {
+    ...defaultOptions,
+    rootMargin: "0px 0px -65% 0px",
+  };
 
-  // 各親要素の監視を開始
+  // ---------------------------------------------------------
+  // Observerを生成
+  // ---------------------------------------------------------
+
+  // デフォルト
+  const defaultObserver = new IntersectionObserver(
+    handleIntersect,
+    defaultOptions,
+  );
+
+  // about-careerセクション用
+  const careerObserver = new IntersectionObserver(
+    handleIntersect,
+    careerOptions,
+  );
+
+  // ---------------------------------------------------------
+  // 各トリガー要素を監視
+  // ---------------------------------------------------------
   fadeInTriggers.forEach((trigger) => {
-    observer.observe(trigger);
+    const aboutCareer = trigger.closest(".js-about-career");
+
+    if (aboutCareer) {
+      // about-careerの時
+      careerObserver.observe(trigger);
+    } else {
+      defaultObserver.observe(trigger);
+    }
   });
 }
