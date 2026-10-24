@@ -94,29 +94,36 @@
                     <!-- content -->
                     <div class="p-works-detail__content">
                         <p class="p-works-detail__text">
-                            <span>就職活動用のポートフォリオサイトです。</span>
-                            <span>コンテンツ構成設計から行い、採用担当の方が迷わないサイトを目指しました。</span>
+                            <span>HTML・CSS・JavaScriptのスキルを証明することを目的に制作した、</span>
+                            <span>架空の会計事務所「青山会計事務所」のWebサイトです。</span>
                         </p>
 
                         <dl>
                             <div class="p-works-detail__item">
-                                <dt>date</dt>
-                                <dd>2026.10</dd>
+                                <dt>制作日</dt>
+                                <dd>2026.09 ~ 2026.10</dd>
                             </div>
                             <div class="p-works-detail__item">
-                                <dt>site url</dt>
+                                <dt>デザインカンプ 提供元</dt>
+                                <dd>
+                                    <a class="u-link"
+                                        href="https://brain-market.com/u/hiroyuu/a/b0QzN5kTMgoTZsNWa0JXY">https://brain-market.com/u/hiroyuu/a/b0QzN5kTMgoTZsNWa0JXY</a>
+                                </dd>
+                            </div>
+                            <div class="p-works-detail__item">
+                                <dt>サイトurl</dt>
                                 <dd><a class="u-link"
                                         href="https://matsuyamarikiya.jp/accounting_firm_wordpress/">https://matsuyamarikiya.jp/accounting_firm_wordpress/</a>
                                 </dd>
                             </div>
                             <div class="p-works-detail__item">
-                                <dt>Frontend source</dt>
+                                <dt>ソースコード (フロントエンド)</dt>
                                 <dd><a class="u-link"
                                         href="https://github.com/matsuriki980/accounting_firm">https://github.com/matsuriki980/accounting_firm</a>
                                 </dd>
                             </div>
                             <div class="p-works-detail__item">
-                                <dt>WordPress source</dt>
+                                <dt>ソースコード (WordPress)</dt>
                                 <dd><a class="u-link"
                                         href="https://github.com/matsuriki980/accounting_firm_wordpress">https://github.com/matsuriki980/accounting_firm_wordpress</a>
                                 </dd>
@@ -144,7 +151,7 @@
                     <dl class="p-works-detail__explanation-list">
                         <div class="p-works-detail__explanation-item">
                             <dt>目的</dt>
-                            <dd>自身のスキルを伝え、Webコーダーとして採用していただくこと</dd>
+                            <dd>フロントエンドスキルとWordPressによるCMS構築スキルを伝えること</dd>
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>担当範囲</dt>
@@ -155,36 +162,57 @@
                             <dd>HTML / </dd>
                             <dd>SCSS / </dd>
                             <dd>JavaScript / </dd>
+                            <dd>WordPress / </dd>
                             <dd>Git・GitHub</dd>
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>制作期間</dt>
                             <dd>
-                                <span>デザイン：約4日</span>
-                                <span>コーディング：約10日</span>
+                                <span>HTML・SCSSコーディング：約2週間</span>
+                                <span>JavaScript実装：約4日</span>
+                                <span>WordPress構築：約8日</span>
                             </dd>
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>工夫した点</dt>
                             <dd>
                                 <div class="p-works-detail__description-group">
-                                    <span
-                                        class="p-works-detail__description-title">JavaScriptとCSS変数を活用したレスポンシブアニメーションの実装</span>
-                                    <span class="p-works-detail__description-text">4つの項目を示す円を線でつなぎ、線が伸びるアニメーションを実装しました。
-                                        当初はposition: absoluteを使用し、pxや%で線の位置と長さを指定していましたが、画面幅によって線がずれる問題が発生しました。
-                                        そこで、JavaScriptのgetBoundingClientRect()を使用し、ビューポートを基準に各要素の位置を取得する方法に変更しました。
-                                        具体的には、画面の上端・左端から円までの距離と、最初の円から最後の円までの距離を算出し、線の位置と長さを求めました。
-                                        算出した値をCSSカスタムプロパティ（CSS変数）に反映することで、画面幅に応じて線の位置と長さを自動調整できるようにしました。
-                                        これにより、画面幅による線のずれを解消し、レスポンシブに対応したアニメーションを実現しました。</span>
+                                    <span class="p-works-detail__description-title">再利用性と保守性を意識したコンポーネント設計</span>
+                                    <span class="p-works-detail__description-text">
+                                        <span>ヘッダー、フッター、セクションタイトルなど、複数ページで使用する共通パーツをHTML・CSSの両面からコンポーネント化し、再利用できるように設計しました。</span>
+                                        <span>これにより、デザインや構造の変更が発生した際も、共通部分を修正するだけで各ページに変更を反映できるようにしました。</span>
+                                        <span>結果として、コードの重複を減らし、保守性の向上と修正作業の効率化を図りました。</span>
+                                    </span>
+                                </div>
+
+                                <div class="p-works-detail__description-group">
+                                    <span class="p-works-detail__description-title">remを活用した可変レイアウトの実装</span>
+                                    <span class="p-works-detail__description-text">
+                                        <span>html要素のfont-sizeをcalc(100vw /
+                                            var(--base-vw))で設定し、画面幅に応じてrem単位の要素が比例して拡大・縮小する可変レイアウトを実装しました。</span>
+                                        <span>スマートフォンでは375px、PCでは1440pxを基準幅として切り替えることで、デザインカンプの数値をそのままrem単位で指定できるようにしました。</span>
+                                        <span>これにより、デザインカンプの数値を変換する手間を省きながら、画面幅に応じたサイズ調整を自動化し、実装作業の効率化と保守性の向上を図りました。</span>
+                                    </span>
+                                </div>
+
+                                <div class="p-works-detail__description-group">
+                                    <span class="p-works-detail__description-title">ページ判定によるメタ情報の一括管理 (WordPress)</span>
+                                    <span class="p-works-detail__description-text">
+                                        <span>ページごとに異なるtitleやog:typeなどのメタ情報を、条件分岐によって一括管理する仕組みを実装しました。</span>
+                                        <span>具体的には、ページの種類に応じて出力する値を判定し、変数に格納することで、共通のHTML構造から各ページに適したメタ情報を出力できるようにしました。</span>
+                                        <span>これにより、テンプレート内の重複した記述を削減し、コードの可読性と保守性の向上を図りました。</span>
+                                    </span>
                                 </div>
 
                                 <div class="p-works-detail__description-group">
                                     <span
-                                        class="p-works-detail__description-title">Works詳細ページにおけるSP・PC画像の切り替え機能の実装</span>
-                                    <span
-                                        class="p-works-detail__description-text">スマートフォンでの閲覧時に、SP・PC両方の画像を縦に並べると、スクロール量が増え、ユーザーの操作負担が大きくなるという課題がありました。
-                                        そこで、一度に表示する画像を1つに絞り、ボタン操作でSP・PCの画像を切り替えられる機能を実装しました。
-                                        これにより、不要なスクロールを減らし、ユーザーが必要な画像を選んで閲覧できるようにしました。</span>
+                                        class="p-works-detail__description-title">functions.phpによるCSS・JavaScriptの読み込み管理
+                                        (WordPress)</span>
+                                    <span class="p-works-detail__description-text">
+                                        <span>CSSやJavaScriptの読み込み処理を各テンプレートファイルに記述すると、管理が複雑になり、修正時の作業負担が増えるという課題がありました。</span>
+                                        <span>そこで、WordPressのfunctions.phpにwp_enqueue_style()とwp_enqueue_script()を使用した読み込み処理を集約し、一括管理できるようにしました。</span>
+                                        <span>これにより、各テンプレートへの重複した記述を防ぎ、コードの保守性と管理効率の向上を図りました。</span>
+                                    </span>
                                 </div>
                             </dd>
                         </div>

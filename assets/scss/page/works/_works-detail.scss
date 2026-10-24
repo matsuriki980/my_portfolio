@@ -89,6 +89,10 @@ figure {
   font-weight: g.$font-weight-regular;
   line-height: 2;
 
+  span {
+    display: block;
+  }
+
   @include g.media() {
     font-size: clamp(16px, 16rem, 18px);
   }
