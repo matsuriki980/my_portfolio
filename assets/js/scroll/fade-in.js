@@ -17,6 +17,9 @@ export function initFadeIn() {
       // 今回の親要素内の子要素を取得
       const fadeInItems = entry.target.querySelectorAll(".js-fade-in-item");
 
+      // out-careerのトリガーか判定
+      const aboutCareer = entry.target.closest(".js-about-career");
+
       // 子要素があればGSAPを実行
       if (fadeInItems.length > 0) {
         gsap.fromTo(
@@ -31,6 +34,23 @@ export function initFadeIn() {
             duration: 0.8,
             ease: "power2.out",
             stagger: 0.15,
+
+            // out-careerなら、同セクションのフェードインアニメーションが終わってからborderを伸ばす
+
+            onComplete: () => {
+              // out-careerセクション以外なら処理を終了
+              if (!aboutCareer) return;
+
+              const aboutCareerBorder = document.querySelector(
+                ".js-about-career__border",
+              );
+
+              if (aboutCareerBorder) {
+                setTimeout(() => {
+                  aboutCareerBorder.classList.add("is-active");
+                }, 1000);
+              }
+            },
           },
         );
       }
@@ -43,7 +63,7 @@ export function initFadeIn() {
   // 監視オプション
   const options = {
     root: null,
-    rootMargin: "0px 0px -60% 0px",
+    rootMargin: "0px 0px -65% 0px",
     threshold: 0,
   };
 

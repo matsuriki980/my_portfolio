@@ -1356,6 +1356,7 @@ body {
 
 .p-about-strengths__item {
   position: relative;
+  opacity: 0;
 }
 
 .p-about-strengths__title {
@@ -1406,6 +1407,7 @@ body {
 @media (width >= 1080px) {
   .p-about-career__inner {
     padding-block: 120px;
+    position: relative;
   }
 }
 
@@ -1419,6 +1421,33 @@ body {
   }
 }
 
+.p-about-career__border {
+  --line-left: 0px;
+  --line-top: 0px;
+  --line-height: 0px;
+  position: absolute;
+  display: block;
+  left: var(--line-left);
+  top: var(--line-top);
+  width: 1px;
+  height: 0;
+  background: #333;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+.p-about-career__border.is-active {
+  animation: line-extend 1.5s linear 0s forwards;
+}
+
+@keyframes line-extend {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--line-height);
+  }
+}
 .p-about-career__list {
   background: #fff;
   padding: 72rem 24rem;
@@ -1430,19 +1459,6 @@ body {
   .p-about-career__list {
     padding: 120px;
     gap: 80px;
-    position: relative;
-  }
-  .p-about-career__list::before {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 510px;
-    background: #333;
-    position: absolute;
-    z-index: 0;
-    top: 138px;
-    left: 307px;
-    opacity: 0.3;
   }
 }
 
@@ -1451,6 +1467,9 @@ body {
     display: grid;
     grid-template-columns: 180px 16px 1fr;
     align-items: baseline;
+    opacity: 0;
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -1542,6 +1561,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 64rem;
   }
+}
+
+.p-about-like__item {
+  opacity: 0;
 }
 
 .p-about-like__img {
