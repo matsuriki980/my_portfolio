@@ -5,6 +5,7 @@ import { initThanks } from "./contact/thanks.js";
 import { initTopFvTextFadeIn } from "./scroll/top-fv-text-fadein.js";
 import { initFadeIn } from "./scroll/fade-in.js";
 import { initUpdateCareerLine } from "./scroll/about-career.js";
+import { initWorksTabBtn } from "./works/works-tab-btn.js";
 
 // 初期化
 initScript();
@@ -14,3 +15,4 @@ initThanks();
 initTopFvTextFadeIn();
 initFadeIn();
 initUpdateCareerLine();
+initWorksTabBtn();
