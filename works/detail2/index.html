@@ -100,17 +100,17 @@
 
                         <dl>
                             <div class="p-works-detail__item">
-                                <dt>date</dt>
+                                <dt>制作日</dt>
                                 <dd>2026.10</dd>
                             </div>
                             <div class="p-works-detail__item">
-                                <dt>site url</dt>
+                                <dt>サイトurl</dt>
                                 <dd><a class="u-link"
                                         href="https://matsuyamarikiya.jp/my_portfolio/">https://matsuyamarikiya.jp/my_portfolio/</a>
                                 </dd>
                             </div>
                             <div class="p-works-detail__item">
-                                <dt>frontend source</dt>
+                                <dt>ソースコード (フロントエンド)</dt>
                                 <dd><a class="u-link"
                                         href="https://github.com/matsuriki980/my_portfolio">https://github.com/matsuriki980/my_portfolio</a>
                                 </dd>
@@ -142,14 +142,15 @@
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>担当範囲</dt>
-                            <dd>コーディング</dd>
+                            <dd>デザイン / コーディング</dd>
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>使用技術</dt>
                             <dd>HTML / </dd>
                             <dd>SCSS / </dd>
                             <dd>JavaScript / </dd>
-                            <dd>Git・GitHub</dd>
+                            <dd>Git・GitHub /</dd>
+                            <dd>Figma</dd>
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>制作期間</dt>
@@ -164,21 +165,25 @@
                                 <div class="p-works-detail__description-group">
                                     <span
                                         class="p-works-detail__description-title">JavaScriptとCSS変数を活用したレスポンシブアニメーションの実装</span>
-                                    <span class="p-works-detail__description-text">4つの項目を示す円を線でつなぎ、線が伸びるアニメーションを実装しました。
-                                        当初はposition: absoluteを使用し、pxや%で線の位置と長さを指定していましたが、画面幅によって線がずれる問題が発生しました。
-                                        そこで、JavaScriptのgetBoundingClientRect()を使用し、ビューポートを基準に各要素の位置を取得する方法に変更しました。
-                                        具体的には、画面の上端・左端から円までの距離と、最初の円から最後の円までの距離を算出し、線の位置と長さを求めました。
-                                        算出した値をCSSカスタムプロパティ（CSS変数）に反映することで、画面幅に応じて線の位置と長さを自動調整できるようにしました。
-                                        これにより、画面幅による線のずれを解消し、レスポンシブに対応したアニメーションを実現しました。</span>
+                                    <span class="p-works-detail__description-text">
+                                        <span>4つの項目を示す円を線でつなぎ、線が伸びるアニメーションを実装しました。</span>
+                                        <span>当初はposition:
+                                            absoluteを使用し、pxや%で線の位置と長さを指定していましたが、画面幅によって線がずれる問題が発生しました。</span>
+                                        <span>そこで、JavaScriptのgetBoundingClientRect()を使用し、ビューポートを基準に各要素の位置を取得する方法に変更しました。</span>
+                                        <span>具体的には、画面の上端・左端から円までの距離と、最初の円から最後の円までの距離を算出し、線の位置と長さを求めました。</span>
+                                        <span>算出した値をCSSカスタムプロパティ（CSS変数）に反映することで、画面幅に応じて線の位置と長さを自動調整できるようにしました。</span>
+                                        <span>これにより、画面幅による線のずれを解消し、レスポンシブに対応したアニメーションを実現しました。</span>
+                                    </span>
                                 </div>
 
                                 <div class="p-works-detail__description-group">
                                     <span
-                                        class="p-works-detail__description-title">Works詳細ページにおけるSP・PC画像の切り替え機能の実装</span>
-                                    <span
-                                        class="p-works-detail__description-text">スマートフォンでの閲覧時に、SP・PC両方の画像を縦に並べると、スクロール量が増え、ユーザーの操作負担が大きくなるという課題がありました。
-                                        そこで、一度に表示する画像を1つに絞り、ボタン操作でSP・PCの画像を切り替えられる機能を実装しました。
-                                        これにより、不要なスクロールを減らし、ユーザーが必要な画像を選んで閲覧できるようにしました。</span>
+                                        class="p-works-detail__description-title">Works詳細ページにおける、プレビュー画像のSP・PC切り替え機能の実装</span>
+                                    <span class="p-works-detail__description-text">
+                                        <span>スマートフォンでの閲覧時に、SP・PC両方の画像を縦に並べると、スクロール量が増え、ユーザーの操作負担が大きくなるという課題がありました。</span>
+                                        <span>そこで、一度に表示する画像を1つに絞り、ボタン操作でSP・PCの画像を切り替えられる機能を実装しました。</span>
+                                        <span>これにより、不要なスクロールを減らし、ユーザーが必要な画像を選んで閲覧できるようにしました。</span>
+                                    </span>
                                 </div>
                             </dd>
                         </div>

@@ -1705,6 +1705,9 @@ figure {
   font-weight: 400;
   line-height: 2;
 }
+.p-works-detail__text span {
+  display: block;
+}
 @media (width >= 1080px) {
   .p-works-detail__text {
     font-size: clamp(16px, 16rem, 18px);
