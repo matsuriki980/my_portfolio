@@ -6,6 +6,8 @@ export function initWorksTabBtn() {
   const tabs = document.querySelectorAll("[data-tab]");
   const imgs = document.querySelectorAll("[data-img]");
 
+  if (!tabs || !imgs) return;
+
   const switchTab = (target, tabData) => {
     // タブの切り替え
     tabs.forEach((tab) => {
