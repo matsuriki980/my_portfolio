@@ -15,6 +15,7 @@ export function initScript() {
     headerScrollTrigger.getBoundingClientRect().top + window.scrollY; // ページトップからトリガー要素までの距離を取得
 
   const hamburgerMenuPlug = hamburgerMenu.classList.contains("is-open"); // ハンバーガーメニュー開閉状態判定プラグ
+  const bodyElement = document.body; // スクロール無効化用
 
   // ----------------------------------------------------------------------------
   // header-bg
@@ -38,6 +39,7 @@ export function initScript() {
   hamburgerBtn.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("is-open");
     header.classList.toggle("is-open");
+    bodyElement.classList.toggle("u-scroll-hidden");
     const scrollY = window.scrollY; // スクロール量を取得
     const hamburgerMenuPlug = hamburgerMenu.classList.contains("is-open");
 
