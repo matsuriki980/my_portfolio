@@ -1729,6 +1729,8 @@ figure {
 .p-works-detail__item a {
   text-decoration: underline;
   color: #4a90e2;
+  overflow-wrap: anywhere;
+  line-height: 2;
 }
 @media (width >= 1080px) {
   .p-works-detail__item dt {
@@ -1766,7 +1768,7 @@ figure {
 }
 
 .p-works-detail__sample-imgs {
-  background: #f5f5f5;
+  background: rgba(74, 144, 226, 0.05);
   padding: 40rem 24rem;
   margin-bottom: 40rem;
 }
@@ -1824,6 +1826,33 @@ figure {
   }
   .p-works-detail__explanation-item:nth-of-type(4), .p-works-detail__explanation-item:nth-of-type(5), .p-works-detail__explanation-item:nth-of-type(6) {
     align-items: flex-start;
+  }
+}
+.p-works-detail__explanation-item:last-of-type dt {
+  margin-bottom: 12rem;
+}
+.p-works-detail__explanation-item:last-of-type dd {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+}
+.p-works-detail__explanation-item:last-of-type dd span {
+  display: block;
+}
+.p-works-detail__explanation-item:last-of-type .p-works-detail__description-title {
+  font-weight: 700;
+  font-size: 16rem;
+  margin-bottom: 8rem;
+}
+@media (width >= 1080px) {
+  .p-works-detail__explanation-item:last-of-type dt {
+    margin-bottom: 0;
+  }
+  .p-works-detail__explanation-item:last-of-type .p-works-detail__description-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.6;
   }
 }
 
