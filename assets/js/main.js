@@ -4,6 +4,7 @@ import { initConfirm } from "./contact/confirm.js";
 import { initThanks } from "./contact/thanks.js";
 import { initTopFvTextFadeIn } from "./scroll/top-fv-text-fadein.js";
 import { initFadeIn } from "./scroll/fade-in.js";
+import { initUpdateCareerLine } from "./scroll/about-career.js";
 
 // 初期化
 initScript();
@@ -12,3 +13,4 @@ initConfirm();
 initThanks();
 initTopFvTextFadeIn();
 initFadeIn();
+initUpdateCareerLine();
