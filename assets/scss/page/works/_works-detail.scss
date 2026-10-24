@@ -115,6 +115,8 @@ figure {
   a {
     text-decoration: underline;
     color: g.$color-accent;
+    overflow-wrap: anywhere;
+    line-height: 2;
   }
 
   @include g.media() {
@@ -159,7 +161,7 @@ figure {
 }
 
 .p-works-detail__sample-imgs {
-  background: g.$color-bg-light;
+  background: rgba($color: g.$color-accent, $alpha: 0.05);
   padding: 40rem 24rem;
   margin-bottom: 40rem;
 
@@ -232,6 +234,42 @@ figure {
     &:nth-of-type(5),
     &:nth-of-type(6) {
       align-items: flex-start;
+    }
+  }
+
+  // 項目 「工夫点」
+  &:last-of-type {
+    dt {
+      margin-bottom: 12rem;
+    }
+
+    dd {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40rem;
+
+      span {
+        display: block;
+      }
+    }
+
+    .p-works-detail__description-title {
+      font-weight: g.$font-weight-bold;
+      font-size: 16rem;
+      margin-bottom: 8rem;
+    }
+
+    @include g.media() {
+      dt {
+        margin-bottom: 0;
+      }
+
+      .p-works-detail__description-title {
+        font-weight: g.$font-weight-bold;
+        font-size: 18px;
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
     }
   }
 }

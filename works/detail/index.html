@@ -7,7 +7,7 @@
     <title>制作物のタイトルが入ります | ポートフォリオ</title>
 
     <!-- OGP設定 -->
-    <meta property="og:url" content="https://matsuyamarikiya.jp/my_portfolio/works/detail/">
+    <meta property="og:url" content="https://matsuyamarikiya.jp/my_portfolio/works/detail3/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="制作物のタイトルが入ります | ポートフォリオ">
     <meta property="og:description" content="未経験からWebコーダーを目指す松山里貴弥のポートフォリオサイトです。これまでに制作したWebサイトや、学習中のスキルなどを紹介しています。">
@@ -79,7 +79,7 @@
                 <!-- article -->
                 <article class="p-works-detail__article">
                     <header class="p-works-detail__head">
-                        <h1 class="p-works-detail__title">サイト名が入りますサイト名が入ります</h1>
+                        <h1 class="p-works-detail__title">架空コーポレートサイト</h1>
                         <div class="p-works-detail__info">
                             <p class="p-works-detail__category">自主制作</p>
                             <p class="p-works-detail__responsibility">coding</p>
@@ -94,29 +94,32 @@
                     <!-- content -->
                     <div class="p-works-detail__content">
                         <p class="p-works-detail__text">
-                            概要文が入ります概要文が入ります概要文が入ります概要文が入ります概要文が入ります概要文が入ります概要文が入ります
+                            <span>就職活動用のポートフォリオサイトです。</span>
+                            <span>コンテンツ構成設計から行い、採用担当の方が迷わないサイトを目指しました。</span>
                         </p>
 
                         <dl>
-                            <div class="p-works-detail__item">
-                                <dt>category</dt>
-                                <dd>コーディング</dd>
-                            </div>
                             <div class="p-works-detail__item">
                                 <dt>date</dt>
                                 <dd>2026.10</dd>
                             </div>
                             <div class="p-works-detail__item">
                                 <dt>site url</dt>
-                                <dd><a class="u-link" href="https://demosite.jp">https://demosite.jp</a></dd>
+                                <dd><a class="u-link"
+                                        href="https://matsuyamarikiya.jp/accounting_firm_wordpress/">https://matsuyamarikiya.jp/accounting_firm_wordpress/</a>
+                                </dd>
                             </div>
                             <div class="p-works-detail__item">
-                                <dt>frontend source</dt>
-                                <dd><a class="u-link" href="https://demosite.jp">https://demosite.jp</a></dd>
+                                <dt>Frontend source</dt>
+                                <dd><a class="u-link"
+                                        href="https://github.com/matsuriki980/accounting_firm">https://github.com/matsuriki980/accounting_firm</a>
+                                </dd>
                             </div>
                             <div class="p-works-detail__item">
-                                <dt>wordpress source</dt>
-                                <dd><a class="u-link" href="https://demosite.jp">https://demosite.jp</a></dd>
+                                <dt>WordPress source</dt>
+                                <dd><a class="u-link"
+                                        href="https://github.com/matsuriki980/accounting_firm_wordpress">https://github.com/matsuriki980/accounting_firm_wordpress</a>
+                                </dd>
                             </div>
                         </dl>
                     </div>
@@ -141,7 +144,7 @@
                     <dl class="p-works-detail__explanation-list">
                         <div class="p-works-detail__explanation-item">
                             <dt>目的</dt>
-                            <dd>目的が入ります目的が入ります目的が入ります目的が入ります目的が入ります目的が入ります</dd>
+                            <dd>自身のスキルを伝え、Webコーダーとして採用していただくこと</dd>
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>担当範囲</dt>
@@ -152,24 +155,37 @@
                             <dd>HTML / </dd>
                             <dd>SCSS / </dd>
                             <dd>JavaScript / </dd>
-                            <dd>WordPress / </dd>
                             <dd>Git・GitHub</dd>
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>制作期間</dt>
                             <dd>
-                                <span>HTML / SCSS / JavaScript：約2週間</span>
-                                <span>WordPress：約3日</span>
+                                <span>デザイン：約4日</span>
+                                <span>コーディング：約10日</span>
                             </dd>
                         </div>
                         <div class="p-works-detail__explanation-item">
                             <dt>工夫した点</dt>
-                            <dd>工夫点が入ります工夫点が入ります工夫点が入ります工夫点が入ります工夫点が入ります工夫点が入ります工夫点が入ります工夫点が入ります工夫点が入ります工夫点が入ります工夫点が入ります
-                            </dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>苦労した点</dt>
-                            <dd>苦労点が入ります苦労点が入ります苦労点が入ります苦労点が入ります苦労点が入ります苦労点が入ります苦労点が入ります苦労点が入ります苦労点が入ります苦労点が入ります苦労点が入ります
+                            <dd>
+                                <div class="p-works-detail__description-group">
+                                    <span
+                                        class="p-works-detail__description-title">JavaScriptとCSS変数を活用したレスポンシブアニメーションの実装</span>
+                                    <span class="p-works-detail__description-text">4つの項目を示す円を線でつなぎ、線が伸びるアニメーションを実装しました。
+                                        当初はposition: absoluteを使用し、pxや%で線の位置と長さを指定していましたが、画面幅によって線がずれる問題が発生しました。
+                                        そこで、JavaScriptのgetBoundingClientRect()を使用し、ビューポートを基準に各要素の位置を取得する方法に変更しました。
+                                        具体的には、画面の上端・左端から円までの距離と、最初の円から最後の円までの距離を算出し、線の位置と長さを求めました。
+                                        算出した値をCSSカスタムプロパティ（CSS変数）に反映することで、画面幅に応じて線の位置と長さを自動調整できるようにしました。
+                                        これにより、画面幅による線のずれを解消し、レスポンシブに対応したアニメーションを実現しました。</span>
+                                </div>
+
+                                <div class="p-works-detail__description-group">
+                                    <span
+                                        class="p-works-detail__description-title">Works詳細ページにおけるSP・PC画像の切り替え機能の実装</span>
+                                    <span
+                                        class="p-works-detail__description-text">スマートフォンでの閲覧時に、SP・PC両方の画像を縦に並べると、スクロール量が増え、ユーザーの操作負担が大きくなるという課題がありました。
+                                        そこで、一度に表示する画像を1つに絞り、ボタン操作でSP・PCの画像を切り替えられる機能を実装しました。
+                                        これにより、不要なスクロールを減らし、ユーザーが必要な画像を選んで閲覧できるようにしました。</span>
+                                </div>
                             </dd>
                         </div>
                     </dl>
@@ -177,9 +193,10 @@
 
                 <!-- pagination  -->
                 <div class="p-works-detail__pagination">
-                    <a href="" class="p-works-detail__pagination-btn p-works-detail__pagination-btn--prev">prev<span
+                    <a href="../detail3/"
+                        class="p-works-detail__pagination-btn p-works-detail__pagination-btn--prev">prev<span
                             class="p-works-detail__pagination-arrow"></span></a>
-                    <a href="" class="p-works-detail__pagination-btn">next<span
+                    <a href="../detail2/" class="p-works-detail__pagination-btn">next<span
                             class="p-works-detail__pagination-arrow"></span></a>
                 </div>
             </div>
