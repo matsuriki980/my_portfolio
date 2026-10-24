@@ -2,7 +2,6 @@ import { initScript } from "./module/script.js";
 import { initContactForm } from "./contact/contact.js";
 import { initConfirm } from "./contact/confirm.js";
 import { initThanks } from "./contact/thanks.js";
-import { initCareer } from "./scroll/career.js";
 import { initTopFvTextFadeIn } from "./scroll/top-fv-text-fadein.js";
 import { initFadeIn } from "./scroll/fade-in.js";
 
@@ -11,6 +10,5 @@ initScript();
 initContactForm();
 initConfirm();
 initThanks();
-initCareer();
 initTopFvTextFadeIn();
 initFadeIn();
