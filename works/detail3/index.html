@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>制作物のタイトルが入ります | ポートフォリオ</title>
+    <title>架空コーポレートサイト2 | ポートフォリオ</title>
 
     <!-- OGP設定 -->
     <meta property="og:url" content="https://matsuyamarikiya.jp/my_portfolio/works/detail3/">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="制作物のタイトルが入ります | ポートフォリオ">
+    <meta property="og:title" content="架空コーポレートサイト2 | ポートフォリオ">
     <meta property="og:description" content="未経験からWebコーダーを目指す松山里貴弥のポートフォリオサイトです。これまでに制作したWebサイトや、学習中のスキルなどを紹介しています。">
     <meta property="og:site_name" content="松山里貴弥のポートフォリオ">
 
@@ -170,23 +170,22 @@
                             <dt>工夫した点</dt>
                             <dd>
                                 <div class="p-works-detail__description-group">
-                                    <span
-                                        class="p-works-detail__description-title">JavaScriptとCSS変数を活用したレスポンシブアニメーションの実装</span>
-                                    <span class="p-works-detail__description-text">4つの項目を示す円を線でつなぎ、線が伸びるアニメーションを実装しました。
-                                        当初はposition: absoluteを使用し、pxや%で線の位置と長さを指定していましたが、画面幅によって線がずれる問題が発生しました。
-                                        そこで、JavaScriptのgetBoundingClientRect()を使用し、ビューポートを基準に各要素の位置を取得する方法に変更しました。
-                                        具体的には、画面の上端・左端から円までの距離と、最初の円から最後の円までの距離を算出し、線の位置と長さを求めました。
-                                        算出した値をCSSカスタムプロパティ（CSS変数）に反映することで、画面幅に応じて線の位置と長さを自動調整できるようにしました。
-                                        これにより、画面幅による線のずれを解消し、レスポンシブに対応したアニメーションを実現しました。</span>
+                                    <span class="p-works-detail__description-title">画面幅に応じたJavaScriptの実行制御</span>
+                                    <span class="p-works-detail__description-text">
+                                        <span>ハンバーガーメニューなど、スマートフォン表示時にのみ必要な機能については、JavaScriptで画面幅を判定し、PC表示時には不要な処理が実行されないように制御しました。</span>
+                                        <span>これにより、画面幅に応じて必要な処理を切り替え、不要な処理の実行を抑えるようにしました。</span>
+                                        <span>また、画面幅の判定処理と各機能の処理を分離することで、コードの可読性と保守性の向上を図りました。</span>
+                                    </span>
                                 </div>
 
                                 <div class="p-works-detail__description-group">
                                     <span
                                         class="p-works-detail__description-title">Works詳細ページにおけるSP・PC画像の切り替え機能の実装</span>
-                                    <span
-                                        class="p-works-detail__description-text">スマートフォンでの閲覧時に、SP・PC両方の画像を縦に並べると、スクロール量が増え、ユーザーの操作負担が大きくなるという課題がありました。
-                                        そこで、一度に表示する画像を1つに絞り、ボタン操作でSP・PCの画像を切り替えられる機能を実装しました。
-                                        これにより、不要なスクロールを減らし、ユーザーが必要な画像を選んで閲覧できるようにしました。</span>
+                                    <span class="p-works-detail__description-text">
+                                        <span>スクロールに応じた要素の表示制御には、scrollイベントではなく、Intersection Observer APIを採用しました。</span>
+                                        <span>要素とビューポートの交差状態を監視することで、スクロールのたびに判定処理を実行するのではなく、指定した条件を満たしたタイミングで処理を実行する仕組みを実装しました。</span>
+                                        <span>これにより、不要な判定処理を抑え、スクロール時の処理負荷の軽減を図りました。</span>
+                                    </span>
                                 </div>
                             </dd>
                         </div>
