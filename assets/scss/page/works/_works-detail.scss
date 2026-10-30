@@ -57,6 +57,7 @@
 
 .p-works-detail__responsibility {
   font-weight: g.$font-weight-regular;
+  font-family: g.$font-family-en;
   text-transform: capitalize;
 }
 
@@ -181,99 +182,253 @@ figure {
 .p-works-detail__explanation-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32rem;
+  gap: 48rem;
   margin-bottom: 80rem;
 
   @include g.media() {
-    gap: 32rem;
+    gap: 40px;
+    margin-bottom: 80px;
   }
 }
 
 .p-works-detail__explanation-item {
-  dt {
-    font-size: 20rem;
-    font-weight: g.$font-weight-medium;
-    line-height: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16rem;
+  padding-bottom: 40rem;
+  border-bottom: 1px solid rgba($color: g.$color-text, $alpha: 0.15);
+
+  @include g.media() {
+    align-items: flex-start;
+    gap: 16px;
+    grid-template-columns: 160rem 1fr;
+    padding-bottom: 40px;
   }
 
-  dd {
-    font-size: 14rem;
-    font-weight: g.$font-weight-regular;
-    line-height: 2;
-    display: inline-block;
+  // 「情報設計」「デザイン」「工夫した点」の3項目はタイトルとコンテンツ間のgapを広げる
+  &--information,
+  &--design,
+  &--point {
+    gap: 36px;
+
+    @include g.media() {
+      gap: 16px;
+    }
+  }
+}
+
+.p-works-detail__explanation-item-title {
+  font-size: 27rem;
+  font-weight: g.$font-weight-bold;
+  line-height: 1.5;
+
+  @include g.media() {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+.p-works-detail__explanation-item-description {
+  line-height: 2;
+}
+
+.p-works-detail__explanation-item-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8rem;
+
+  @include g.media() {
+    gap: 8px;
+  }
+}
+
+.p-works-detail__explanation-item-list-item {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 8rem 1fr;
+  gap: 6rem;
+
+  // リストの黒〇
+  &::before {
+    content: "";
+    display: block;
+    width: 6rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: g.$color-text;
+    margin-top: 14rem;
   }
 
   @include g.media() {
-    display: flex;
+    gap: 8px;
     align-items: center;
 
-    dt {
-      width: 160rem;
-      line-height: 1.5;
-      font-size: 18px;
+    // リストの黒〇
+    &::before {
+      width: 8px;
+      margin-top: 1px;
     }
+  }
+}
 
-    dd {
-      font-size: 16px;
-    }
+.p-works-detail__description-list {
+  // 「制作期間」と「デザイン」内のlistにはgapを指定しない
+  &:not(
+    .p-works-detail__description-list--period,
+    .p-works-detail__description-list--design
+  ) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40rem;
 
-    // ddが1つの時の幅を指定する
-    &:not(:nth-of-type(3), :nth-of-type(4)) {
-      dd {
-        width: 80%;
-      }
-    }
-
-    // 3つ目のitemにdisplay-blockを指定し改行する
-    &:nth-of-type(4) {
-      dd {
-        span {
-          display: block;
-        }
-      }
-    }
-
-    // ddが複数行の時はaline-items:flex-startを指定
-    &:nth-of-type(4),
-    &:nth-of-type(5),
-    &:nth-of-type(6) {
-      align-items: flex-start;
+    @include g.media() {
+      gap: 40px;
     }
   }
 
-  // 項目 「工夫点」
-  &:last-of-type {
-    dt {
-      margin-bottom: 12rem;
-    }
+  // 「制作期間」のスタイル
+  &--period {
+    .p-works-detail__description-title {
+      font-size: 16rem;
+      margin-bottom: 0;
 
-    dd {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40rem;
-
-      span {
-        display: block;
+      @include g.media() {
+        font-size: clamp(16px, 16rem, 18px);
       }
     }
+  }
+}
 
-    .p-works-detail__description-title {
-      font-weight: g.$font-weight-bold;
-      font-size: 16rem;
-      margin-bottom: 8rem;
+.p-works-detail__description-group {
+  // 「制作期間」と「デザイン」のdl内グループの横に黒〇を配置
+  &--period {
+    display: flex;
+    align-items: center;
+
+    // テキスト横の黒〇
+    &::before {
+      content: "";
+      display: block;
+      width: 6rem;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: g.$color-text;
+      margin-top: 1rem;
+      margin-right: 6rem;
     }
 
     @include g.media() {
-      dt {
-        margin-bottom: 0;
+      // テキスト横の黒〇
+      &::before {
+        width: 8px;
+        margin-top: 1px;
+        margin-right: 8px;
       }
+    }
+  }
+}
 
-      .p-works-detail__description-title {
-        font-weight: g.$font-weight-bold;
-        font-size: 18px;
-        margin-bottom: 8px;
-        line-height: 1.6;
-      }
+.p-works-detail__description-second-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+
+  @include g.media() {
+    gap: 16px;
+  }
+}
+
+.p-works-detail__description-second-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-works-detail__description-title {
+  font-size: 22rem;
+  font-weight: g.$font-weight-medium;
+  line-height: 1.5;
+  margin-bottom: 10rem;
+
+  @include g.media() {
+    font-size: clamp(18px, 18rem, 20px);
+    margin-bottom: 8px;
+  }
+}
+
+.p-works-detail__description-font,
+.p-works-detail__description-color {
+  display: flex;
+  align-items: center;
+  font-weight: g.$font-weight-medium;
+
+  // テキスト横の黒〇
+  &::before {
+    content: "";
+    display: block;
+    width: 6rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: g.$color-text;
+    margin-top: 1rem;
+    margin-right: 6rem;
+  }
+
+  @include g.media() {
+    // テキスト横の黒〇
+    &::before {
+      width: 8px;
+      margin-top: 1px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.p-works-detail__description-font-name--en {
+  font-family: g.$font-family-en;
+}
+
+.p-works-detail__description-color-code {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-left: 8rem;
+
+  // □の色設定
+  &::before {
+    content: "";
+    display: block;
+    width: 12rem;
+    aspect-ratio: 1/1;
+    border: 1px solid rgba($color: g.$color-text, $alpha: 0.2);
+    background: g.$color-bg;
+  }
+
+  // アクセントカラー
+  &--accent {
+    &::before {
+      background: g.$color-accent;
+    }
+  }
+
+  // テキストカラー
+  &--text {
+    &::before {
+      background: g.$color-text;
+    }
+  }
+
+  // サブカラー
+  &--sub {
+    &::before {
+      background: g.$color-bg-light;
+    }
+  }
+
+  @include g.media() {
+    margin-left: 8px;
+
+    &::before {
+      width: 16px;
     }
   }
 }

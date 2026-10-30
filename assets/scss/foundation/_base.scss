@@ -18,9 +18,13 @@ html {
 }
 
 body {
-  font-family: g.$font-family-en;
+  font-family: g.$font-family-jp;
   font-style: normal;
   font-size: 16rem;
   font-weight: g.$font-weight-regular;
   color: g.$color-text;
+
+  @include g.media() {
+    font-size: clamp(16px, 16rem, 18px);
+  }
 }

@@ -135,59 +135,239 @@
                     </div>
 
                     <!-- explanation -->
-                    <dl class="p-works-detail__explanation-list">
-                        <div class="p-works-detail__explanation-item">
-                            <dt>目的</dt>
-                            <dd>自身のスキルを伝え、Webコーダーとして採用していただくこと</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>担当範囲</dt>
-                            <dd>デザイン / コーディング</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>使用技術</dt>
-                            <dd>HTML / </dd>
-                            <dd>SCSS / </dd>
-                            <dd>JavaScript / </dd>
-                            <dd>Git・GitHub /</dd>
-                            <dd>Figma</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>制作期間</dt>
-                            <dd>
-                                <span>デザイン：約4日</span>
-                                <span>コーディング：約10日</span>
-                            </dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>工夫した点</dt>
-                            <dd>
-                                <div class="p-works-detail__description-group">
-                                    <span
-                                        class="p-works-detail__description-title">JavaScriptとCSS変数を活用したレスポンシブアニメーションの実装</span>
-                                    <span class="p-works-detail__description-text">
-                                        <span>4つの項目を示す円を線でつなぎ、線が伸びるアニメーションを実装しました。</span>
-                                        <span>当初はposition:
-                                            absoluteを使用し、pxや%で線の位置と長さを指定していましたが、画面幅によって線がずれる問題が発生しました。</span>
-                                        <span>そこで、JavaScriptのgetBoundingClientRect()を使用し、ビューポートを基準に各要素の位置を取得する方法に変更しました。</span>
-                                        <span>具体的には、画面の上端・左端から円までの距離と、最初の円から最後の円までの距離を算出し、線の位置と長さを求めました。</span>
-                                        <span>算出した値をCSSカスタムプロパティ（CSS変数）に反映することで、画面幅に応じて線の位置と長さを自動調整できるようにしました。</span>
-                                        <span>これにより、画面幅による線のずれを解消し、レスポンシブに対応したアニメーションを実現しました。</span>
-                                    </span>
-                                </div>
+                    <div class="p-works-detail__explanation-list">
 
-                                <div class="p-works-detail__description-group">
-                                    <span
-                                        class="p-works-detail__description-title">Works詳細ページにおける、プレビュー画像のSP・PC切り替え機能の実装</span>
-                                    <span class="p-works-detail__description-text">
-                                        <span>スマートフォンでの閲覧時に、SP・PC両方の画像を縦に並べると、スクロール量が増え、ユーザーの操作負担が大きくなるという課題がありました。</span>
-                                        <span>そこで、一度に表示する画像を1つに絞り、ボタン操作でSP・PCの画像を切り替えられる機能を実装しました。</span>
-                                        <span>これにより、不要なスクロールを減らし、ユーザーが必要な画像を選んで閲覧できるようにしました。</span>
-                                    </span>
-                                </div>
+                        <!-- 目的 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">目的</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                自身のスキルを伝え、WEBコーダーとして採用していただくこと
                             </dd>
-                        </div>
-                    </dl>
+                        </dl>
+
+                        <!-- 担当範囲 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">担当範囲</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <ul class="p-works-detail__explanation-item-list">
+                                    <li class="p-works-detail__explanation-item-list-item">デザイン</li>
+                                    <li class="p-works-detail__explanation-item-list-item">コーディング</li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <!-- 使用技術 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">使用技術</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <ul class="p-works-detail__explanation-item-list">
+                                    <li class="p-works-detail__explanation-item-list-item">HTML</li>
+                                    <li class="p-works-detail__explanation-item-list-item">SCSS</li>
+                                    <li class="p-works-detail__explanation-item-list-item">JavaScript</li>
+                                    <li class="p-works-detail__explanation-item-list-item">Git・GitHub</li>
+                                    <li class="p-works-detail__explanation-item-list-item">Figma</li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <!-- 実装機能 -->
+                        <dl class="p-works-detail__explanation-item p-works-detail__explanation-item--design">
+                            <dt class="p-works-detail__explanation-item-title">実装機能</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <ul class="p-works-detail__explanation-item-list">
+                                    <li class="p-works-detail__explanation-item-list-item">ハンバーガーメニュー</li>
+                                    <li class="p-works-detail__explanation-item-list-item">
+                                        スクロール量計算で算出した位置によるヘッダー背景の切り替え
+                                    </li>
+                                    <li class="p-works-detail__explanation-item-list-item">
+                                        フェードインスクロールアニメーション (GSAP)
+                                    </li>
+                                    <li class="p-works-detail__explanation-item-list-item">TOPページ
+                                        テキストフェードインアニメーション (GSAP)
+                                    </li>
+                                    <li class="p-works-detail__explanation-item-list-item">TOPページ
+                                        お問い合わせフォーム フォーム → 入力内容確認 → 送信完了の3ステップ (メール送受信はFormspree)
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <!-- 制作期間 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">制作期間</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <dl class="p-works-detail__description-list p-works-detail__description-list--period">
+                                    <div
+                                        class="p-works-detail__description-group p-works-detail__description-group--period">
+                                        <dt class="p-works-detail__description-title">デザイン：</dt>
+                                        <dd class="p-works-detail__description-text">約4日</dd>
+                                    </div>
+                                    <div
+                                        class="p-works-detail__description-group p-works-detail__description-group--period">
+                                        <dt class="p-works-detail__description-title">コーディング：</dt>
+                                        <dd class="p-works-detail__description-text">約10日</dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                        <!-- 情報設計 -->
+                        <dl class="p-works-detail__explanation-item p-works-detail__explanation-item--information">
+                            <dt class="p-works-detail__explanation-item-title">情報設計</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <dl class="p-works-detail__description-list">
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            目的に合わせたコンテンツの配置
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>採用担当者が先に知りたいのは、応募者のスキルレベルだと考え、worksセクションとskillセクションをサイトの序盤に配置しました。</span>
+                                            <span>また、aboutセクションとprofileセクションに顔写真を配置し、顔が見えることによる安心感や信頼感を与えられるようにしました。</span>
+                                        </dd>
+                                    </div>
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            入力ミスを防ぐ、3ステップ式のお問い合わせフォーム
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>お問い合わせ時の入力ミスを防ぐため、「入力フォーム」「入力内容確認」「送信完了画面」の3ステップ構成にしました。</span>
+                                            <span>入力内容を送信前に確認できるようにすることで、入力ミスによるユーザーとサイト運営者の行き違いを防ぐことを意図しました。</span>
+                                            <span>また、各ステップを図で示すことで、現在の進捗状況と送信完了までの流れを把握しやすくし、ゴールが見えないことによるユーザーのストレスを軽減できるようにしました。</span>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                        <!-- デザイン -->
+                        <dl class="p-works-detail__explanation-item p-works-detail__explanation-item--design">
+                            <dt class="p-works-detail__explanation-item-title">デザイン</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <dl class="p-works-detail__description-list">
+
+                                    <!-- コンセプト -->
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">コンセプト</dt>
+                                        <dd class="p-works-detail__description-text">
+                                            誠実さと信頼感を伝え、ユーザーが迷わず目的を達成できる、使いやすいサイト
+                                        </dd>
+                                    </div>
+
+                                    <!-- フォント -->
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">フォント</dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <dl class="p-works-detail__description-second-list">
+                                                <div class="p-works-detail__description-second-group">
+                                                    <dt class="p-works-detail__description-font">
+                                                        日本語：
+                                                        <span class="p-works-detail__description-font-name">Noto Sans
+                                                            JP</span>
+                                                    </dt>
+                                                    <dd class="p-works-detail__description-text">
+                                                        誠実な印象を与えながら、可読性と視認性を確保する。
+                                                    </dd>
+                                                </div>
+                                                <div class="p-works-detail__description-second-group">
+                                                    <dt class="p-works-detail__description-font">
+                                                        英語：
+                                                        <span
+                                                            class="p-works-detail__description-font-name p-works-detail__description-font-name--en">Montserrat</span>
+                                                    </dt>
+                                                    <dd class="p-works-detail__description-text">
+                                                        モダンで洗練された印象を与えつつ、派手すぎないため、個性を出しながらも誠実さを損なわず、信頼感を与える。英語や数字に使用。
+                                                    </dd>
+                                                </div>
+                                            </dl>
+                                        </dd>
+                                    </div>
+
+                                    <!-- 配色 -->
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">配色</dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <dl class="p-works-detail__description-second-list">
+                                                <div class="p-works-detail__description-group">
+                                                    <dt class="p-works-detail__description-color">
+                                                        ベースカラー：
+                                                        <span
+                                                            class="p-works-detail__description-color-code">#FFFFFF</span>
+                                                    </dt>
+                                                    <dd class="p-works-detail__description-text">
+                                                        幅広い色と組み合わせやすく、アクセントカラーの水色と組み合わせることで、誠実な印象をより引き立てる。
+                                                    </dd>
+                                                </div>
+                                                <div class="p-works-detail__description-group">
+                                                    <dt class="p-works-detail__description-color">
+                                                        アクセントカラー：
+                                                        <span
+                                                            class="p-works-detail__description-color-code p-works-detail__description-color-code--accent">#4A90E2</span>
+                                                    </dt>
+                                                    <dd class="p-works-detail__description-text">
+                                                        一般的な青色よりも柔らかく親しみやすい印象を与えながら、誠実さと信頼感を表現。
+                                                    </dd>
+                                                </div>
+                                                <div class="p-works-detail__description-group">
+                                                    <dt class="p-works-detail__description-color">
+                                                        テキストカラー：
+                                                        <span
+                                                            class="p-works-detail__description-color-code p-works-detail__description-color-code--text">#333333</span>
+                                                    </dt>
+                                                    <dd class="p-works-detail__description-text">
+                                                        黒よりもコントラストを抑えつつ、文字の視認性を確保し、長時間の閲覧でも目への負担を軽減
+                                                    </dd>
+                                                </div>
+                                                <div class="p-works-detail__description-group">
+                                                    <dt class="p-works-detail__description-color">
+                                                        サブカラー：
+                                                        <span
+                                                            class="p-works-detail__description-color-code p-works-detail__description-color-code--sub">#F5F5F5</span>
+                                                    </dt>
+                                                    <dd class="p-works-detail__description-text">
+                                                        ベースカラーの白色やアクセントカラーの水色と調和し、サイト全体の雰囲気を損なわない。背景やコンテンツの区切りなどに使用
+                                                    </dd>
+                                                </div>
+                                            </dl>
+                                        </dd>
+                                    </div>
+
+                                </dl>
+                            </dd>
+                        </dl>
+
+                        <!-- 工夫した点 -->
+                        <dl class="p-works-detail__explanation-item p-works-detail__explanation-item--point">
+                            <dt class="p-works-detail__explanation-item-title">工夫した点</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <dl class="p-works-detail__description-list">
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            JavaScriptとCSS変数を活用したレスポンシブアニメーションの実装
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>4つの項目を示す円を線でつなぎ、線が伸びるアニメーションを実装しました。</span>
+                                            <span>当初はposition:absoluteを使用し、pxや%で線の位置と長さを指定していましたが、画面幅によって線がずれる問題が発生しました。</span>
+                                            <span>そこで、JavaScriptのgetBoundingClientRect()を使用し、ビューポートを基準に各要素の位置を取得する方法に変更しました。</span>
+                                            <span>具体的には、画面の上端・左端から円までの距離と、最初の円から最後の円までの距離を算出し、線の位置と長さを求めました。</span>
+                                            <span>算出した値をCSSカスタムプロパティ（CSS変数）に反映することで、画面幅に応じて線の位置と長さを自動調整できるようにしました。</span>
+                                            <span>これにより、画面幅による線のずれを解消し、レスポンシブに対応したアニメーションを実現しました。</span>
+                                        </dd>
+                                    </div>
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            Works詳細ページにおける、プレビュー画像のSP・PC切り替え機能の実装
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>スマートフォンでの閲覧時に、SP・PC両方の画像を縦に並べると、スクロール量が増え、ユーザーの操作負担が大きくなるという課題がありました。</span>
+                                            <span>そこで、一度に表示する画像を1つに絞り、ボタン操作でSP・PCの画像を切り替えられる機能を実装しました。</span>
+                                            <span>これにより、不要なスクロールを減らし、ユーザーが必要な画像を選んで閲覧できるようにしました。</span>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                    </div>
                 </article>
 
                 <!-- pagination  -->
