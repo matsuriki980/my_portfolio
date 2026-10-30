@@ -143,53 +143,96 @@
                         </div>
                     </div>
 
-                    <!-- explanation -->
-                    <dl class="p-works-detail__explanation-list">
-                        <div class="p-works-detail__explanation-item">
-                            <dt>目的</dt>
-                            <dd>HTML/CSS/JavaScriptの基礎力を伝えること</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>担当範囲</dt>
-                            <dd>コーディング</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>使用技術</dt>
-                            <dd>HTML / </dd>
-                            <dd>CSS / </dd>
-                            <dd>JavaScript / </dd>
-                            <dd>Git・GitHub</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>制作期間</dt>
-                            <dd>
-                                <span>コーディング：約10日 (1日2時間)</span>
-                            </dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>工夫した点</dt>
-                            <dd>
-                                <div class="p-works-detail__description-group">
-                                    <span class="p-works-detail__description-title">画面幅に応じたJavaScriptの実行制御</span>
-                                    <span class="p-works-detail__description-text">
-                                        <span>ハンバーガーメニューなど、スマートフォン表示時にのみ必要な機能については、JavaScriptで画面幅を判定し、PC表示時には不要な処理が実行されないように制御しました。</span>
-                                        <span>これにより、画面幅に応じて必要な処理を切り替え、不要な処理の実行を抑えるようにしました。</span>
-                                        <span>また、画面幅の判定処理と各機能の処理を分離することで、コードの可読性と保守性の向上を図りました。</span>
-                                    </span>
-                                </div>
 
-                                <div class="p-works-detail__description-group">
-                                    <span
-                                        class="p-works-detail__description-title">Works詳細ページにおけるSP・PC画像の切り替え機能の実装</span>
-                                    <span class="p-works-detail__description-text">
-                                        <span>スクロールに応じた要素の表示制御には、scrollイベントではなく、Intersection Observer APIを採用しました。</span>
-                                        <span>要素とビューポートの交差状態を監視することで、スクロールのたびに判定処理を実行するのではなく、指定した条件を満たしたタイミングで処理を実行する仕組みを実装しました。</span>
-                                        <span>これにより、不要な判定処理を抑え、スクロール時の処理負荷の軽減を図りました。</span>
-                                    </span>
-                                </div>
+                    <!-- explanation -->
+                    <div class="p-works-detail__explanation-list">
+
+                        <!-- 目的 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">目的</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                HTML/CSS/JavaScriptの基礎力を伝えること
                             </dd>
-                        </div>
-                    </dl>
+                        </dl>
+
+                        <!-- 担当範囲 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">担当範囲</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <ul class="p-works-detail__explanation-item-list">
+                                    <li class="p-works-detail__explanation-item-list-item">コーディング</li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <!-- 使用技術 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">使用技術</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <ul class="p-works-detail__explanation-item-list">
+                                    <li class="p-works-detail__explanation-item-list-item">HTML</li>
+                                    <li class="p-works-detail__explanation-item-list-item">CSS</li>
+                                    <li class="p-works-detail__explanation-item-list-item">JavaScript</li>
+                                    <li class="p-works-detail__explanation-item-list-item">Git・GitHub</li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+
+                        <!-- 実装機能 -->
+                        <dl class="p-works-detail__explanation-item p-works-detail__explanation-item--design">
+                            <dt class="p-works-detail__explanation-item-title">実装機能</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <ul class="p-works-detail__explanation-item-list">
+                                    <li class="p-works-detail__explanation-item-list-item">ハンバーガーメニュー</li>
+                                    <li class="p-works-detail__explanation-item-list-item">
+                                        スクロール位置に応じたページトップボタンの表示とクリック時の移動処理
+                                    </li>
+                                    <li class="p-works-detail__explanation-item-list-item">
+                                        Intersection Observer APIを使用したフェードインアニメーション
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <!-- 制作期間 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">制作期間</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                約10日(1日2時間)
+                            </dd>
+                        </dl>
+
+                        <!-- 工夫した点 -->
+                        <dl class="p-works-detail__explanation-item p-works-detail__explanation-item--point">
+                            <dt class="p-works-detail__explanation-item-title">工夫した点</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <dl class="p-works-detail__description-list">
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            画面幅に応じたJavaScriptの実行制御
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>ハンバーガーメニューなど、スマートフォン表示時にのみ必要な機能については、JavaScriptで画面幅を判定し、PC表示時には不要な処理が実行されないように制御しました。</span>
+                                            <span>これにより、画面幅に応じて必要な処理を切り替え、不要な処理の実行を抑えるようにしました。</span>
+                                            <span>また、画面幅の判定処理と各機能の処理を分離することで、コードの可読性と保守性の向上を図りました。</span>
+                                        </dd>
+                                    </div>
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            Intersection Observer APIを活用したスクロール処理の最適化 </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>スクロールに応じた要素の表示制御には、scrollイベントではなく、Intersection Observer
+                                                APIを採用しました。</span>
+                                            <span>要素とビューポートの交差状態を監視することで、スクロールのたびに判定処理を実行するのではなく、指定した条件を満たしたタイミングで処理を実行する仕組みを実装しました。</span>
+                                            <span>これにより、不要な判定処理を抑え、スクロール時の処理負荷の軽減を図りました。</span>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                    </div>
                 </article>
 
                 <!-- pagination  -->

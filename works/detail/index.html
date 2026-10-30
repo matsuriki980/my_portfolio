@@ -94,8 +94,8 @@
                     <!-- content -->
                     <div class="p-works-detail__content">
                         <p class="p-works-detail__text">
-                            <span>HTML・CSS・JavaScriptのスキルを証明することを目的に制作した、</span>
-                            <span>架空の会計事務所「青山会計事務所」のWebサイトです。</span>
+                            HTML・CSS・JavaScript・WordPressのスキルを証明することを目的に制作した、
+                            架空の会計事務所「青山会計事務所」のWebサイトです。
                         </p>
 
                         <dl>
@@ -148,75 +148,156 @@
                     </div>
 
                     <!-- explanation -->
-                    <dl class="p-works-detail__explanation-list">
-                        <div class="p-works-detail__explanation-item">
-                            <dt>目的</dt>
-                            <dd>フロントエンドスキルとWordPressによるCMS構築スキルを伝えること</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>担当範囲</dt>
-                            <dd>コーディング</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>使用技術</dt>
-                            <dd>HTML / </dd>
-                            <dd>SCSS / </dd>
-                            <dd>JavaScript / </dd>
-                            <dd>WordPress / </dd>
-                            <dd>Git・GitHub</dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>制作期間</dt>
-                            <dd>
-                                <span>HTML・SCSSコーディング：約2週間</span>
-                                <span>JavaScript実装：約4日</span>
-                                <span>WordPress構築：約8日</span>
+                    <div class="p-works-detail__explanation-list">
+
+                        <!-- 目的 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">目的</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                フロントエンドスキルとWordPressによるCMS構築スキルを伝えること
                             </dd>
-                        </div>
-                        <div class="p-works-detail__explanation-item">
-                            <dt>工夫した点</dt>
-                            <dd>
-                                <div class="p-works-detail__description-group">
-                                    <span class="p-works-detail__description-title">再利用性と保守性を意識したコンポーネント設計</span>
-                                    <span class="p-works-detail__description-text">
-                                        <span>ヘッダー、フッター、セクションタイトルなど、複数ページで使用する共通パーツをHTML・CSSの両面からコンポーネント化し、再利用できるように設計しました。</span>
-                                        <span>これにより、デザインや構造の変更が発生した際も、共通部分を修正するだけで各ページに変更を反映できるようにしました。</span>
-                                        <span>結果として、コードの重複を減らし、保守性の向上と修正作業の効率化を図りました。</span>
-                                    </span>
-                                </div>
+                        </dl>
 
-                                <div class="p-works-detail__description-group">
-                                    <span class="p-works-detail__description-title">remを活用した可変レイアウトの実装</span>
-                                    <span class="p-works-detail__description-text">
-                                        <span>html要素のfont-sizeをcalc(100vw /
-                                            var(--base-vw))で設定し、画面幅に応じてrem単位の要素が比例して拡大・縮小する可変レイアウトを実装しました。</span>
-                                        <span>スマートフォンでは375px、PCでは1440pxを基準幅として切り替えることで、デザインカンプの数値をそのままrem単位で指定できるようにしました。</span>
-                                        <span>これにより、デザインカンプの数値を変換する手間を省きながら、画面幅に応じたサイズ調整を自動化し、実装作業の効率化と保守性の向上を図りました。</span>
-                                    </span>
-                                </div>
-
-                                <div class="p-works-detail__description-group">
-                                    <span class="p-works-detail__description-title">ページ判定によるメタ情報の一括管理 (WordPress)</span>
-                                    <span class="p-works-detail__description-text">
-                                        <span>ページごとに異なるtitleやog:typeなどのメタ情報を、条件分岐によって一括管理する仕組みを実装しました。</span>
-                                        <span>具体的には、ページの種類に応じて出力する値を判定し、変数に格納することで、共通のHTML構造から各ページに適したメタ情報を出力できるようにしました。</span>
-                                        <span>これにより、テンプレート内の重複した記述を削減し、コードの可読性と保守性の向上を図りました。</span>
-                                    </span>
-                                </div>
-
-                                <div class="p-works-detail__description-group">
-                                    <span
-                                        class="p-works-detail__description-title">functions.phpによるCSS・JavaScriptの読み込み管理
-                                        (WordPress)</span>
-                                    <span class="p-works-detail__description-text">
-                                        <span>CSSやJavaScriptの読み込み処理を各テンプレートファイルに記述すると、管理が複雑になり、修正時の作業負担が増えるという課題がありました。</span>
-                                        <span>そこで、WordPressのfunctions.phpにwp_enqueue_style()とwp_enqueue_script()を使用した読み込み処理を集約し、一括管理できるようにしました。</span>
-                                        <span>これにより、各テンプレートへの重複した記述を防ぎ、コードの保守性と管理効率の向上を図りました。</span>
-                                    </span>
-                                </div>
+                        <!-- 担当範囲 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">担当範囲</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <ul class="p-works-detail__explanation-item-list">
+                                    <li class="p-works-detail__explanation-item-list-item">コーディング</li>
+                                </ul>
                             </dd>
-                        </div>
-                    </dl>
+                        </dl>
+
+                        <!-- 使用技術 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">使用技術</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <ul class="p-works-detail__explanation-item-list">
+                                    <li class="p-works-detail__explanation-item-list-item">HTML</li>
+                                    <li class="p-works-detail__explanation-item-list-item">SCSS</li>
+                                    <li class="p-works-detail__explanation-item-list-item">JavaScript</li>
+                                    <li class="p-works-detail__explanation-item-list-item">WordPress</li>
+                                    <li class="p-works-detail__explanation-item-list-item">Git・GitHub</li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <!-- 実装機能 -->
+                        <dl class="p-works-detail__explanation-item p-works-detail__explanation-item--design">
+                            <dt class="p-works-detail__explanation-item-title">実装機能</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <dl class="p-works-detail__description-list">
+
+                                    <!-- フロントエンド -->
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">フロントエンド</dt>
+                                        <dd class="p-works-detail__explanation-item-description">
+                                            <ul class="p-works-detail__explanation-item-list">
+                                                <li class="p-works-detail__explanation-item-list-item">ハンバーガーメニュー</li>
+                                                <li class="p-works-detail__explanation-item-list-item">
+                                                    スクロール量計算で算出した位置によるヘッダー背景の切り替え
+                                                </li>
+                                                <li class="p-works-detail__explanation-item-list-item">自動再生カルーセルスライダー (Splide)
+                                                </li>
+                                                <li class="p-works-detail__explanation-item-list-item">手動式カルーセルスライダー (Splide)
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+
+                                    <!-- WordPress -->
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">WordPress</dt>
+                                        <dd class="p-works-detail__explanation-item-description">
+                                            <ul class="p-works-detail__explanation-item-list">
+                                                <li class="p-works-detail__explanation-item-list-item">お知らせページ
+                                                    (通常投稿・詳細ページ)</li>
+                                                <li class="p-works-detail__explanation-item-list-item">
+                                                    お客様の声ページ (カスタム投稿・詳細ページ)
+                                                </li>
+                                                <li class="p-works-detail__explanation-item-list-item">トップページ
+                                                    (お知らせ・お客様の声の投稿データを出力)
+                                                </li>
+                                                <li class="p-works-detail__explanation-item-list-item">お問い合わせフォーム (フォーム
+                                                    → 入力確認画面 → 送信完了画面の3ステップ)
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                        <!-- 制作期間 -->
+                        <dl class="p-works-detail__explanation-item">
+                            <dt class="p-works-detail__explanation-item-title">制作期間</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <dl class="p-works-detail__description-list p-works-detail__description-list--period">
+                                    <div
+                                        class="p-works-detail__description-group p-works-detail__description-group--period">
+                                        <dt class="p-works-detail__description-title">HTML/CSS/JavaScript：</dt>
+                                        <dd class="p-works-detail__description-text">約2週間</dd>
+                                    </div>
+                                    <div
+                                        class="p-works-detail__description-group p-works-detail__description-group--period">
+                                        <dt class="p-works-detail__description-title">WordPress：</dt>
+                                        <dd class="p-works-detail__description-text">約8日</dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                        <!-- 工夫した点 -->
+                        <dl class="p-works-detail__explanation-item p-works-detail__explanation-item--point">
+                            <dt class="p-works-detail__explanation-item-title">工夫した点</dt>
+                            <dd class="p-works-detail__explanation-item-description">
+                                <dl class="p-works-detail__description-list">
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            再利用性と保守性を意識したコンポーネント設計
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>ヘッダー、フッター、セクションタイトルなど、複数ページで使用する共通パーツをHTML・CSSの両面からコンポーネント化し、再利用できるように設計しました。</span>
+                                            <span>これにより、デザインや構造の変更が発生した際も、共通部分を修正するだけで各ページに変更を反映できるようにしました。</span>
+                                            <span>結果として、コードの重複を減らし、保守性の向上と修正作業の効率化を図りました。</span>
+                                        </dd>
+                                    </div>
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            remを活用した可変レイアウトの実装
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>html要素のfont-sizeをcalc(100vw /
+                                                var(--base-vw))で設定し、画面幅に応じてrem単位の要素が比例して拡大・縮小する可変レイアウトを実装しました。</span>
+                                            <span>スマートフォンでは375px、PCでは1440pxを基準幅として切り替えることで、デザインカンプの数値をそのままrem単位で指定できるようにしました。</span>
+                                            <span>これにより、デザインカンプの数値を変換する手間を省きながら、画面幅に応じたサイズ調整を自動化し、実装作業の効率化と保守性の向上を図りました。</span>
+                                        </dd>
+                                    </div>
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            ページ判定によるメタ情報の一括管理 (WordPress)
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>ページごとに異なるtitleやog:typeなどのメタ情報を、条件分岐によって一括管理する仕組みを実装しました。</span>
+                                            <span>具体的には、ページの種類に応じて出力する値を判定し、変数に格納することで、共通のHTML構造から各ページに適したメタ情報を出力できるようにしました。</span>
+                                            <span>これにより、テンプレート内の重複した記述を削減し、コードの可読性と保守性の向上を図りました。</span>
+                                        </dd>
+                                    </div>
+                                    <div class="p-works-detail__description-group">
+                                        <dt class="p-works-detail__description-title">
+                                            functions.phpによるCSS・JavaScriptの読み込み管理 (WordPress)
+                                        </dt>
+                                        <dd class="p-works-detail__description-text">
+                                            <span>CSSやJavaScriptの読み込み処理を各テンプレートファイルに記述すると、管理が複雑になり、修正時の作業負担が増えるという課題がありました。</span>
+                                            <span>そこで、WordPressのfunctions.phpにwp_enqueue_style()とwp_enqueue_script()を使用した読み込み処理を集約し、一括管理できるようにしました。</span>
+                                            <span>これにより、各テンプレートへの重複した記述を防ぎ、コードの保守性と管理効率の向上を図りました。</span>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                    </div>
                 </article>
 
                 <!-- pagination  -->
